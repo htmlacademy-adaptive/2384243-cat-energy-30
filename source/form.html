@@ -28,13 +28,13 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a href="index.html">главная</a>
+              <a class="main-nav__link" href="index.html">главная</a>
             </li>
             <li class="main-nav__item">
-              <a href="catalog.html">каталог продукции</a>
+              <a class="main-nav__link" href="catalog.html">каталог продукции</a>
             </li>
-            <li class="main-nav__item main-nav__item--current">
-              <a href="#">подбор программы</a>
+            <li class="main-nav__item">
+              <a class="main-nav__link  main-nav__link--current" href="#">подбор программы</a>
             </li>
           </ul>
         </div>
@@ -53,32 +53,32 @@
         <form class="form__container" action="https://echo.htmlacademy.ru/" method="post">
 
           <div class="form__data-wrapper data">
-            <label class="data__name-label label" for="name">ИМЯ:*</label>
-            <input class="data__name-field field" type="text" id="name" name="name" placeholder="барсик" required>
-            <label class="data__weight-label label" for="weight">Вес (кг):*</label>
-            <input class="data__weight-field field" type="number" id="weight" name="weight" placeholder="7" required>
-            <label class="data__age-label label" for="age">Возраст (лет):</label>
-            <input class="data__age-field field" type="number" id="age" name="age" placeholder="7">
+            <label class="form__label data__name-label" for="name">ИМЯ:*</label>
+            <input class="form__field data__name-field" type="text" id="name" name="name" placeholder="барсик" required>
+            <label class="form__label data__weight-label" for="weight">Вес (кг):*</label>
+            <input class="form__field data__weight-field" type="number" id="weight" name="weight" placeholder="7" required>
+            <label class="form__label data__age-label" for="age">Возраст (лет):</label>
+            <input class="form__field data__age-field" type="number" id="age" name="age" placeholder="7">
           </div>
 
           <div class="form__control control">
             <ul class="control__list">
               <li class="control__item">
-                <label class="control__radio-label label">
+                <label class="form__label control__radio-label">
                   <input class="visually-hidden control__input" type="radio" name="type-group" value="slim" checked>
                   <span class="control__radio-name"></span>
                   похудение
                 </label>
               </li>
               <li class="control__item">
-                <label class="control__radio-label label">
+                <label class="form__label control__radio-label">
                   <input class="visually-hidden control__input" type="radio" name="type-group" value="mass">
                   <span class="control__radio-name"></span>
                   Набор массы
                 </label>
               </li>
               <li class="control__item">
-                <label class="control__radio-label label">
+                <label class="form__label control__radio-label">
                   <input class="visually-hidden control__input" type="radio" name="type-group" value="help">
                   <span class="control__radio-name"></span>
                   Не знаю (Нужен ваш совет)
@@ -87,46 +87,46 @@
             </ul>
           </div>
 
-          <fieldset class="owner-contacts">
-            <legend class="owner-contacts__title">Контактные данные
+          <fieldset class="form__contacts owner-contacts">
+            <legend class="form__legend owner-contacts__title">Контактные данные
               <br>(владельца кота)</legend>
-            <label class="owner-contacts__email-label label" for="email">E-mail:*</label>
-            <input class="owner-contacts__field field" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
-            <label class="owner-contacts__tel-label label" for="tel">Телефон:*</label>
-            <input class="owner-contacts__field field" type="tel" id="tel" name="tel" placeholder="8 (960) 900-60-90" required>
+            <label class="form__label owner-contacts__email-label" for="email">E-mail:*</label>
+            <input class="form__field owner-contacts__field" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
+            <label class="form__label owner-contacts__tel-label" for="tel">Телефон:*</label>
+            <input class="owner-contacts__field" type="tel" id="tel" name="tel" placeholder="8 (960) 900-60-90" required>
           </fieldset>
 
-          <fieldset class="comment">
-            <legend class="comment__title">Комментарий</legend>
-            <textarea class="comment__field" id="feedback" name="feedback">Расскажите обо всех повАдках кота</textarea>
+          <fieldset class="form__comment comment">
+            <legend class="form__legend comment__title">Комментарий</legend>
+            <textarea class="form__comment-text comment__field" id="feedback" name="feedback">Расскажите обо всех повАдках кота</textarea>
           </fieldset>
 
-          <fieldset class="more-info control">
-            <legend class="more-info__title">Дополнительно</legend>
+          <fieldset class="form__more-info control">
+            <legend class="form__legend control__title">Дополнительно</legend>
             <ul class="control__list">
               <li class="control__item">
-                <label class="control__checkbox-label label">
+                <label class="control__checkbox-label">
                   <input class="visually-hidden control__input" type="checkbox" name="sweetener" checked>
                   <span class="control__checkbox-name"></span>
                   сахарозаменитель
                 </label>
               </li>
               <li class="control__item">
-                <label class="control__checkbox-label label">
+                <label class="control__checkbox-label">
                   <input class="visually-hidden control-input" type="checkbox" name="water">
                   <span class="control__checkbox-name"></span>
                   питьевая вода
                 </label>
               </li>
               <li class="control__item">
-                <label class="control__checkbox-label label">
+                <label class="control__checkbox-label">
                   <input class="visually-hidden control-input" type="checkbox" name="milk">
                   <span class="control__checkbox-name"></span>
                   молоко
                 </label>
               </li>
               <li class="control__item">
-                <label class="control__checkbox-label label">
+                <label class="control__checkbox-label">
                   <input class="visually-hidden control-input" type="checkbox" name="vitamins">
                   <span class="control__checkbox-name"></span>
                   витамины

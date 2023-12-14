@@ -1,0 +1,32 @@
+.other-products__header {
+  color: #000000;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.other-products__item {
+  text-align: center;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.other-products__title {
+  color: #222222;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.other-products__present-text {
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  background: {
+    color: $bg-basic-green;
+  };
+}
