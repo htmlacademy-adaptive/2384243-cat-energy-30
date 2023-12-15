@@ -52,16 +52,18 @@
 
         <form class="form__container" action="https://echo.htmlacademy.ru/" method="post">
 
-          <div class="form__data-wrapper data">
+          <fieldset class="form__data data">
+            <legend class="visually-hidden">Данные питомца</legend>
             <label class="form__label data__name-label" for="name">ИМЯ:*</label>
             <input class="form__field data__name-field" type="text" id="name" name="name" placeholder="барсик" required>
             <label class="form__label data__weight-label" for="weight">Вес (кг):*</label>
             <input class="form__field data__weight-field" type="number" id="weight" name="weight" placeholder="7" required>
             <label class="form__label data__age-label" for="age">Возраст (лет):</label>
             <input class="form__field data__age-field" type="number" id="age" name="age" placeholder="7">
-          </div>
+          </fieldset>
 
-          <div class="form__control control">
+          <fieldset class="form__control control">
+            <legend class="visually-hidden">Цель</legend>
             <ul class="control__list">
               <li class="control__item">
                 <label class="form__label control__radio-label">
@@ -85,7 +87,7 @@
                 </label>
               </li>
             </ul>
-          </div>
+          </fieldset>
 
           <fieldset class="form__contacts owner-contacts">
             <legend class="form__legend owner-contacts__title">Контактные данные
@@ -98,36 +100,37 @@
 
           <fieldset class="form__comment comment">
             <legend class="form__legend comment__title">Комментарий</legend>
-            <textarea class="form__comment-text comment__field" id="feedback" name="feedback">Расскажите обо всех повАдках кота</textarea>
+            <label class="visually-hidden" for="feedback"></label>
+            <textarea class="form__comment-text comment__field" id="feedback" name="feedback" placeholder="Расскажите обо всех повАдках кота"></textarea>
           </fieldset>
 
-          <fieldset class="form__more-info control">
-            <legend class="form__legend control__title">Дополнительно</legend>
+          <fieldset class="form__control control control--more-info">
+            <legend class="form__legend control__legend">Дополнительно</legend>
             <ul class="control__list">
               <li class="control__item">
-                <label class="control__checkbox-label">
+                <label class="form__label control__checkbox-label">
                   <input class="visually-hidden control__input" type="checkbox" name="sweetener" checked>
                   <span class="control__checkbox-name"></span>
                   сахарозаменитель
                 </label>
               </li>
               <li class="control__item">
-                <label class="control__checkbox-label">
-                  <input class="visually-hidden control-input" type="checkbox" name="water">
+                <label class="form__label control__checkbox-label">
+                  <input class="visually-hidden control__input" type="checkbox" name="water">
                   <span class="control__checkbox-name"></span>
                   питьевая вода
                 </label>
               </li>
               <li class="control__item">
-                <label class="control__checkbox-label">
-                  <input class="visually-hidden control-input" type="checkbox" name="milk">
+                <label class="form__label control__checkbox-label">
+                  <input class="visually-hidden control__input" type="checkbox" name="milk">
                   <span class="control__checkbox-name"></span>
                   молоко
                 </label>
               </li>
               <li class="control__item">
-                <label class="control__checkbox-label">
-                  <input class="visually-hidden control-input" type="checkbox" name="vitamins">
+                <label class="form__label control__checkbox-label">
+                  <input class="visually-hidden control__input" type="checkbox" name="vitamins">
                   <span class="control__checkbox-name"></span>
                   витамины
                 </label>
