@@ -1,0 +1,31 @@
+.other-products__header {
+  color: $title-text;
+  text-align: center;
+  font-family: $secondary-ff;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.other-products__item {
+  text-align: center;
+  line-height: 14px;
+}
+
+.other-products__title {
+  color: $catalog-title-text;
+  text-align: center;
+  font-family: $secondary-ff;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.other-products__present-text {
+  color: $white-text;
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  background: {
+    color: $bg-green;
+  };
+}

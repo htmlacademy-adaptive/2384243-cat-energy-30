@@ -1,0 +1,29 @@
+.instance__title {
+  font-family: $secondary-ff;
+  font-size: 36px;
+  line-height: 40px;
+  color: $title-text;
+  text-align: center;
+}
+
+.instance__result-number {
+  font-family: $secondary-ff;
+  font-size: 24px;
+  line-height: 24px;
+  color: $title-text;
+  text-align: center;
+}
+
+.instance__result-description {
+  text-align: center;
+  font-size: 12px;
+  line-height: 100%;
+}
+
+.instance__text {
+  font-family: $secondary-ff;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $title-text;
+  text-align: center;
+}

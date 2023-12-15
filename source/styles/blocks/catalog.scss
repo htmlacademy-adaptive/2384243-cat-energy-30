@@ -1,0 +1,16 @@
+.catalog__show-more {
+  h3 {
+    color: $catalog-text;
+    text-align: center;
+    font-family: $secondary-ff;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  p {
+    text-align: center;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}

@@ -1,0 +1,13 @@
+.product-card__title {
+  color: $catalog-title-text;
+  font-family: $secondary-ff;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.product-card__info {
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+}
