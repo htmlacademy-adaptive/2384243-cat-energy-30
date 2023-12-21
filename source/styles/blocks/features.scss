@@ -1,3 +1,70 @@
+.features__item {
+  position: relative;
+  background-color: $light-grey;
+
+  &--slim {
+    &::before {
+      content: "";
+      position: absolute;
+      background: $green no-repeat center;
+      width: 50px;
+      height: 50px;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background: url("../../images/icons/stack.svg#cat-slim") no-repeat center/36px 50px;
+      width: 36px;
+      height: 50px;
+      top: -5px;
+      left: 5px;
+    }
+
+    @media (min-width: 768px) {
+      //background: $green url("../../images/icons/stack.svg#cat-slim") no-repeat center/140px 194px;
+    }
+
+    @media (min-width: 1440px) {
+      //background: $green url("../../images/icons/stack.svg#cat-slim") no-repeat center/70px 97px;
+    }
+  }
+
+  &--pro {
+    &::before {
+      content: "";
+      position: absolute;
+      background: $green no-repeat center;
+      width: 50px;
+      height: 50px;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background: url("../../images/icons/stack.svg#cat-pro") no-repeat center/67px 28px;
+      width: 67px;
+      height: 28px;
+      top: 10px;
+      left: -10px;
+    }
+
+    @media (min-width: 768px) {
+      //background: $green url("../../images/icons/stack.svg#cat-pro") no-repeat center/268px 112px;
+    }
+
+    @media (min-width: 1440px) {
+      //background: $green url("../../images/icons/stack.svg#cat-pro") no-repeat center/134px 56px;
+    }
+  }
+}
+
 .features__title {
   font-family: $secondary-ff;
   font-size: 24px;
@@ -13,4 +80,23 @@
   color: $title-text;
   text-align: center;
   text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    mask-image: url("../../images/icons/stack.svg#arrow");
+    mask-repeat: no-repeat;
+    mask-position: top 0 right 5px;
+    background-color: $title-text;
+    width: 32px;
+    height: 10px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

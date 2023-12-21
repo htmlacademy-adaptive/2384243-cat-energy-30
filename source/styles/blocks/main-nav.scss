@@ -1,3 +1,12 @@
+.main-nav__toggle {
+  // background: url("../../images/icons/stack.svg#nav-burger") no-repeat center/contain;
+  position: relative;
+}
+
+.main-nav__nav-burger {
+  position: absolute;
+}
+
 .main-nav__link {
   color: $title-text;
   font-family: $secondary-ff;

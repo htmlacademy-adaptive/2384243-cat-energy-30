@@ -1,3 +1,15 @@
-body { //временный стиль
-  background-color: #999999;
+.social__link {
+  color: $dark-grey;
+
+  &:hover {
+    color: $green;
+  }
+
+  &:focus {
+    color: $green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

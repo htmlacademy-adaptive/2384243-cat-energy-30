@@ -1,3 +1,44 @@
-body { //временный стиль
-  background-color: #999999;
+.owner-contacts {
+  position: relative;
+}
+
+.owner-contacts__email-label {
+  &::after {
+    content: "";
+    position: absolute;
+    mask-image: url("../../images/icons/stack.svg#email");
+    mask-repeat: no-repeat;
+    background-color: $title-text;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    right: 20px;
+
+    &:hover {
+      background-color: $catalog-title-text;
+    }
+
+    &:focus {
+      background-color: $green;
+    }
+
+    &:invalid {
+      background-color: $red;
+    }
+  }
+}
+
+
+.owner-contacts__tel-label {
+  &::after {
+    content: "";
+    position: absolute;
+    mask-image: url("../../images/icons/stack.svg#phone");
+    mask-repeat: no-repeat;
+    background-color: $title-text;
+    width: 20px;
+    height: 20px;
+    top: 20px;
+    right: 20px;
+  }
 }
