@@ -1,3 +1,7 @@
+.instance {
+  position: relative;
+}
+
 .instance__title {
   font-family: $secondary-ff;
   font-size: 36px;
@@ -26,4 +30,47 @@
   text-transform: uppercase;
   color: $title-text;
   text-align: center;
+}
+
+.instance__toggle {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  color: $dark-grey;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: $dark-grey;
+    width: 4px;
+    height: 256px;
+    border-radius: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 23px;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: $green;
+  }
+
+  &:hover::before {
+    background-color: $green;
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    color: $green-toggle;
+    opacity: 0.6;
+  }
+
+  &:active::before {
+    background-color: $green-toggle;
+    opacity: 0.6;
+  }
 }

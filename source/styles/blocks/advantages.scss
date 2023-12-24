@@ -1,3 +1,53 @@
+.advantages {
+  position: relative;
+}
+
+.advantages__item {
+  &--useful {
+    &::before {
+      content: "";
+      position: absolute;
+      background: $green url("../../images/icons/stack.svg#leaf") no-repeat center/25px 28px;
+      width: 60px;
+      height: 60px;
+      left: 0;
+    }
+  }
+
+  &--form {
+    &::before {
+      content: "";
+      position: absolute;
+      background: $green url("../../images/icons/stack.svg#flour") no-repeat center/27px 29px;
+      width: 60px;
+      height: 60px;
+      left: 0;
+    }
+  }
+
+  &--eat {
+    &::before {
+      content: "";
+      position: absolute;
+      background: $green url("../../images/icons/stack.svg#eat") no-repeat center/26px 30px;
+      width: 60px;
+      height: 60px;
+      left: 0;
+    }
+  }
+
+  &--time {
+    &::before {
+      content: "";
+      position: absolute;
+      background: $green url("../../images/icons/stack.svg#clock") no-repeat center/27px 31px;
+      width: 60px;
+      height: 60px;
+      left: 0;
+    }
+  }
+}
+
 .advantages__title {
   font-family: $secondary-ff;
   font-size: 36px;

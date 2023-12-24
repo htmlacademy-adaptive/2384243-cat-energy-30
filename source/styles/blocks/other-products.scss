@@ -20,12 +20,124 @@
   text-transform: uppercase;
 }
 
+.other-products__bg-image {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image:
+      image-set(
+    url("../../images/bg-catalog-mobile@1x.webp") type("image/webp") 1x,
+    url("../../images/bg-catalog-mobile@2x.webp") type("image/webp") 2x,
+    url("../../images/bg-catalog-mobile@1x.jpg") type("image/jpg") 1x,
+    url("../../images/bg-catalog-mobile@2x.jpg") type("image/jpg") 2x,
+  );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-width: 320px;
+    min-height: 290px;
+    left: 0;
+    top: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $light-green;
+    left: 0;
+    top: 0;
+    min-width: 320px;
+    min-height: 290px;
+    z-index: 1;
+  }
+
+  @media (min-width: 768px) {
+    &::before {
+      content: "";
+      position: absolute;
+      background-image:
+        image-set(
+      url("../../images/bg-catalog-tablet@1x.webp") type("image/webp") 1x,
+      url("../../images/bg-catalog-tablet@2x.webp") type("image/webp") 2x,
+      url("../../images/bg-catalog-tablet@1x.jpg") type("image/jpg") 1x,
+      url("../../images/bg-catalog-tablet@2x.jpg") type("image/jpg") 2x,
+      );
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      min-width: 707px;
+      min-height: 200px;
+      left: 0;
+      top: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: $light-green;
+      left: 0;
+      top: 0;
+      min-width: 707px;
+      min-height: 200px;
+      z-index: 1;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    &::before {
+      content: "";
+      position: absolute;
+      background-image:
+        image-set(
+      url("../../images/bg-catalog-desktop@1x.webp") type("image/webp") 1x,
+      url("../../images/bg-catalog-desktop@2x.webp") type("image/webp") 2x,
+      url("../../images/bg-catalog-desktop@1x.jpg") type("image/jpg") 1x,
+      url("../../images/bg-catalog-desktop@2x.jpg") type("image/jpg") 2x,
+      );
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      min-width: 245px;
+      min-height: 288px;
+      left: 0;
+      top: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: $light-green;
+      left: 0;
+      top: 0;
+      min-width: 245px;
+      min-height: 288px;
+      z-index: 1;
+    }
+  }
+}
+
 .other-products__present-text {
-  color: $white-text;
+  color: $white;
   text-align: center;
   font-size: 16px;
   line-height: 20px;
-  background: {
-    color: $bg-green;
-  };
+
+  position: relative;
+  z-index: 1;
+  display: block;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../../images/icons/stack.svg#present");
+    background-repeat: no-repeat;
+    background-size: 78px 81px;
+    top: 85%;
+    left: 130px;
+    width: 300px;
+    height: 290px;
+    z-index: 1;
+  }
 }

@@ -1,3 +1,23 @@
+.catalog__plus-link {
+  display: block;
+  height: 30px;
+  width: 30px;
+  background-color: $grey;
+  mask-image: url("../../images/icons/stack.svg#plus");
+  mask-position: center;
+  mask-repeat: no-repeat;
+
+  @media (min-width: 768px) {
+    display: block;
+    height: 60px;
+    width: 60px;
+    background-color: $grey;
+    mask-image: url("../../images/icons/stack.svg#plus");
+    mask-position: center;
+    mask-repeat: no-repeat;
+  }
+}
+
 .catalog__show-more {
   h3 {
     color: $catalog-text;
