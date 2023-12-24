@@ -32,36 +32,45 @@
   text-align: center;
 }
 
-.instance__images {
-  &::after {
+.instance__toggle {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  color: $dark-grey;
+  z-index: 1;
+
+  &::before {
     content: "";
     position: absolute;
-    mask-image: url("../../images/icons/stack.svg#curtain");
-    mask-repeat: no-repeat;
     background-color: $dark-grey;
-    width: 40px;
+    width: 4px;
     height: 256px;
+    border-radius: 2px;
     top: 50%;
     transform: translateY(-50%);
+    right: 23px;
+    z-index: -1;
+  }
 
-    &:hover {
-      rect {
-        fill: $green;
-        stroke: $green;
-      }
-    }
+  &:hover {
+    color: $green;
+  }
 
-    &:focus {
-      opacity: 0.3;
-    }
+  &:hover::before {
+    background-color: $green;
+  }
 
-    &:active {
-      color: $green;
-      opacity: 0.6;
-    }
+  &:focus {
+    opacity: 0.6;
+  }
 
-    &:default {
-      color: $dark-grey;
-    }
+  &:active {
+    color: $green-toggle;
+    opacity: 0.6;
+  }
+
+  &:active::before {
+    background-color: $green-toggle;
+    opacity: 0.6;
   }
 }
