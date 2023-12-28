@@ -1,6 +1,13 @@
+.main-inner {
+  width: 280px;
+  margin: 0 auto;
+}
+
 .main-inner__header {
   color: $title-text;
   font-family: $secondary-ff;
   font-size: 36px;
   line-height: 36px;
+
+  padding: 27px 0 41px;
 }

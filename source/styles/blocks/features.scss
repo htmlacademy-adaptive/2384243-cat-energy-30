@@ -1,16 +1,31 @@
+.features {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1/-1;
+    gap: 75px;
+
+    margin-bottom: 71px;
+  }
+}
+
 .features__item {
   position: relative;
   background-color: $light-grey;
+  margin-bottom: 20px;
+  padding: 30px 33px 18px 20px;
 
   &--slim {
+    margin-bottom: 30px;
+
     &::before {
       content: "";
       position: absolute;
-      background: $green no-repeat center;
+      background: $green no-repeat;
       width: 50px;
       height: 50px;
-      top: 0;
-      left: 0;
+      top: 24px;
+      left: 20px;
       border-radius: 50%;
     }
 
@@ -20,16 +35,42 @@
       background: url("../../images/icons/stack.svg#cat-slim") no-repeat center/36px 50px;
       width: 36px;
       height: 50px;
-      top: -5px;
-      left: 5px;
+      top: 21px;
+      left: 27px;
     }
 
-    @media (min-width: 768px) {
-      //background: $green url("../../images/icons/stack.svg#cat-slim") no-repeat center/140px 194px;
+    @media (min-width: $tablet-width) {
+      &::before {
+        width: 200px;
+        height: 200px;
+        top: 92px;
+        left: 70%;
+      }
+
+      &::after {
+        background: url("../../images/icons/stack.svg#cat-slim") no-repeat center/140px 194px;
+        width: 140px;
+        height: 194px;
+        top: 81px;
+        left: 75%;
+      }
     }
 
-    @media (min-width: 1440px) {
-      //background: $green url("../../images/icons/stack.svg#cat-slim") no-repeat center/70px 97px;
+    @media (min-width: $desktop-width) {
+      &::before {
+        width: 100px;
+        height: 100px;
+        top: 0;
+        left: 0;
+      }
+
+      &::after {
+        background: url("../../images/icons/stack.svg#cat-slim") no-repeat center/70px 97px;
+        width: 70px;
+        height: 97px;
+        top: -5px;
+        left: 5px;
+      }
     }
   }
 
@@ -37,11 +78,11 @@
     &::before {
       content: "";
       position: absolute;
-      background: $green no-repeat center;
+      background: $green no-repeat;
       width: 50px;
       height: 50px;
-      top: 0;
-      left: 0;
+      top: 24px;
+      left: 20px;
       border-radius: 50%;
     }
 
@@ -51,26 +92,93 @@
       background: url("../../images/icons/stack.svg#cat-pro") no-repeat center/67px 28px;
       width: 67px;
       height: 28px;
-      top: 10px;
-      left: -10px;
+      top: 35px;
+      left: 13px;
     }
 
-    @media (min-width: 768px) {
-      //background: $green url("../../images/icons/stack.svg#cat-pro") no-repeat center/268px 112px;
+    @media (min-width: $tablet-width) {
+      &::before {
+        width: 200px;
+        height: 200px;
+        top: 91px;
+        left: 70%;
+      }
+
+      &::after {
+        background: url("../../images/icons/stack.svg#cat-pro") no-repeat center/268px 112px;
+        width: 268px;
+        height: 112px;
+        top: 135px;
+        left: 65%;
+      }
     }
 
-    @media (min-width: 1440px) {
-      //background: $green url("../../images/icons/stack.svg#cat-pro") no-repeat center/134px 56px;
+    @media (min-width: $desktop-width) {
+      &::before {
+        width: 100px;
+        height: 100px;
+        top: 0;
+        left: 0;
+      }
+
+      &::after {
+        background: url("../../images/icons/stack.svg#cat-pro") no-repeat center/134px 56px;
+        width: 134px;
+        height: 56px;
+        top: 10px;
+        left: -10px;
+      }
     }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 77px 316px 53px 53px;
+
+    &--pro {
+      margin-bottom: 45px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 77px 67px 59px 52px;
+    margin: 0;
   }
 }
 
 .features__title {
-  font-family: $secondary-ff;
-  font-size: 24px;
-  line-height: 37px;
-  color: $title-text;
-  text-transform: uppercase;
+  margin-bottom: 29px;
+  margin-left: 70px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 214px;
+    margin-bottom: 73px;
+  }
+}
+
+.features__text {
+  &::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid $border-b-mobile;
+    margin: 23px 0 15px;
+
+    @media (min-width: $tablet-width) {
+      border: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 23px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 52px;
+  }
 }
 
 .features__link {
@@ -78,18 +186,26 @@
   font-size: 16px;
   line-height: 16px;
   color: $title-text;
-  text-align: center;
   text-transform: uppercase;
+
+  display: block;
+
 
   &::after {
     content: "";
     position: absolute;
     mask-image: url("../../images/icons/stack.svg#arrow");
     mask-repeat: no-repeat;
-    mask-position: top 0 right 5px;
     background-color: $title-text;
     width: 32px;
     height: 10px;
+    left: 107px;
+    bottom: 20px;
+
+    @media (min-width: $tablet-width) {
+      left: 185px;
+      bottom: 60px;
+    }
   }
 
   &:hover {
@@ -98,5 +214,10 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: normal;
   }
 }
