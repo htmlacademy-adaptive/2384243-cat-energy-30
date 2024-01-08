@@ -1,3 +1,107 @@
-body { //временный стиль
+.control {
+  border: none;
+  padding: 0;
+  margin-bottom: 19px;
+
+  &--more-info {
+    margin-bottom: 34px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 65px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 0;
+
+    &--more-info {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+.control__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  @media (min-width: $tablet-width) {
+    border: 1px solid $border-input;
+    padding: 23px 27px 27px 27px;
+
+    &--more-info {
+      display: grid;
+      grid-template-columns: repeat(2, 284px);
+      gap: 32px 60px;
+      border: none;
+      padding: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 25px 28px;
+
+    &--more-info {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 75px;
+    }
+  }
+}
+
+.control__label {
+  position: relative;
+  padding-left: 45px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 60px;
+  }
+}
+
+.control__input {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 0;
+  top: -3px;
   background-color: $white;
+  border-radius: 50%;
+  border: 1px solid $border-checkbox;
+  margin-right: 15px;
+
+  &--checkbox {
+    border-radius: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+  }
+}
+
+.control-check[type="radio"]:checked + .control__input--radio::after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: $green;
+  left: 5px;
+  top: 5px;
+}
+
+.control-check[type="checkbox"]:checked + .control__input--checkbox {
+  background-image: url("../../images/icons/stack.svg#vector");
+  background-repeat: no-repeat;
+  background-position: center;
 }

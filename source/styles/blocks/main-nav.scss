@@ -7,6 +7,10 @@
 }
 
 .main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
   display: none;
 
   @media (min-width: $tablet-width) {
@@ -33,6 +37,11 @@
   @media (min-width: $desktop-width) {
     font-size: 20px;
     line-height: normal;
-    color: $white;
+    color: $catalog-text;
+
+    &--index {
+      color: $white;
+    }
   }
 }
+

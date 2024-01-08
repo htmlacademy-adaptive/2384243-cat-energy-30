@@ -1,7 +1,10 @@
 .main-footer {
+  background-color: $light-grey;
+
   display: flex;
   flex-direction: column;
   padding: 40px 20px;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;

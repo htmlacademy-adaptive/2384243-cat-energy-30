@@ -1,3 +1,88 @@
-body { //временный стиль
-  background-color: $white;
+.data {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px 13px;
+  margin-bottom: 24px;
+  border: none;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    gap: 20px 13px;
+    margin-bottom: 72px;
+
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 0;
+
+    &--owner-contacts {
+      display: grid;
+      grid-template-columns: auto 1fr auto 1fr;
+      //gap: 75px;
+    }
+  }
 }
+
+.data__label {
+  align-self: center;
+
+  &--tel {
+    @media (min-width: $desktop-width) {
+      margin-left: 75px;
+    }
+  }
+}
+
+.data__input {
+  &--email {
+    padding-right: 49px;
+    mask-image: url("../../images/icons/stack.svg#email");
+    mask-repeat: no-repeat;
+    background-color: $title-text;
+    mask-size: 20px 20px;
+    mask-position: right 30px top 13px;
+    border: 1px solid $border-checkbox;
+
+    &:focus {
+      background-color: $green;
+    }
+
+    &:invalid {
+      background-color: $red;
+      border-color: $red;
+    }
+  }
+
+  &--tel {
+    padding-right: 49px;
+    mask-image: url("../../images/icons/stack.svg#phone");
+    mask-repeat: no-repeat;
+    background-color: $title-text;
+    mask-size: 20px 20px;
+    mask-position: right 30px top 13px;
+    border: 1px solid $border-checkbox;
+
+    &:focus {
+      background-color: $green;
+    }
+
+    &:invalid {
+      background-color: $red;
+      border-color: $red;
+    }
+  }
+}
+
+.data__field {
+  border: 1px solid $border-input;
+  padding: 14px 15px 13px 15px;
+
+  @media (min-width: $tablet-width) {
+    padding: 11px 10px 11px 20px;
+  }
+}
+

@@ -146,10 +146,20 @@
 }
 
 .features__title {
+  color: $title-text;
+  font-family: $secondary-ff;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+
+  margin: 0;
   margin-bottom: 29px;
   margin-left: 70px;
 
   @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+
     margin-left: 0;
     margin-bottom: 24px;
   }
@@ -161,6 +171,8 @@
 }
 
 .features__text {
+  margin: 0;
+
   &::after {
     content: "";
     display: block;
