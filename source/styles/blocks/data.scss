@@ -37,7 +37,14 @@
   }
 }
 
-.data__input {
+.data__field {
+  border: 1px solid $border-input;
+  padding: 14px 15px 13px 15px;
+
+  @media (min-width: $tablet-width) {
+    padding: 11px 10px 11px 20px;
+  }
+
   &--email {
     padding-right: 49px;
     mask-image: url("../../images/icons/stack.svg#email");
@@ -76,13 +83,3 @@
     }
   }
 }
-
-.data__field {
-  border: 1px solid $border-input;
-  padding: 14px 15px 13px 15px;
-
-  @media (min-width: $tablet-width) {
-    padding: 11px 10px 11px 20px;
-  }
-}
-
