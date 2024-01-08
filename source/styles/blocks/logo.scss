@@ -1,4 +1,9 @@
 .logo {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  align-items: center;
+
   &:hover {
     opacity: 0.8;
   }
@@ -10,4 +15,14 @@
   &:active {
     opacity: 0.6;
   }
+
+  @media (min-width: $tablet-width) {
+    gap: 13px;
+    min-width: 174px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 202px;
+  }
 }
+

@@ -1,3 +1,15 @@
-body { //временный стиль
-  background-color: $white;
+.main-form {
+  margin-top: 27px;
+
+  .contacts__wrap {
+    background-color: $light-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 74px;
+  }
 }

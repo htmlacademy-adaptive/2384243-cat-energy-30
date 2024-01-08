@@ -1,3 +1,54 @@
+.social {
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
+.social__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid $border-b-mobile;
+    width: 100%;
+    top: -20px;
+    left: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid $border-b-mobile;
+    width: 100%;
+    top: 40px;
+    left: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 9px 0 5px 0;
+
+    &::before {
+      content: none;
+    }
+
+    &::after {
+      content: none;
+    }
+  }
+}
+
 .social__link {
   color: $dark-grey;
 

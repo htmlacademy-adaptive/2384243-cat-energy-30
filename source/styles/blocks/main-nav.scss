@@ -1,16 +1,47 @@
 .main-nav__toggle {
   // background: url("../../images/icons/stack.svg#nav-burger") no-repeat center/contain;
-  position: relative;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
-.main-nav__nav-burger {
-  position: absolute;
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    min-width: 436px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 475px;
+  }
 }
 
 .main-nav__link {
   color: $title-text;
   font-family: $secondary-ff;
-  font-size: 18px;
-  line-height: 24px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: normal;
+    color: $catalog-text;
+
+    &--index {
+      color: $white;
+    }
+  }
 }
+

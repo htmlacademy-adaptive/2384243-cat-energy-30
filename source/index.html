@@ -14,7 +14,7 @@
 
   <body class="page__body">
 
-    <header class="main-header">
+    <header class="main-header container">
 
       <a class="main-header__logo logo" href="index.html">
         <picture>
@@ -35,19 +35,17 @@
             <use href="images/sprite.svg#nav-burger"></use>
           </svg>
         </button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--current" href="#">главная</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="catalog.html">каталог продукции</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="form.html">подбор программы</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link  main-nav__link--index main-nav__link--current" href="#">главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link  main-nav__link--index" href="catalog.html">каталог продукции</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link  main-nav__link--index" href="form.html">подбор программы</a>
+          </li>
+        </ul>
       </nav>
 
     </header>
@@ -68,7 +66,7 @@
         </div>
       </article>
 
-      <section class="features">
+      <section class="features container">
         <h2 class="visually-hidden">Определяемся с целью</h2>
         <div class="features__item features__item--slim">
           <h3 class="features__title">похудение</h3>
@@ -82,7 +80,7 @@
         </div>
       </section>
 
-      <section class="advantages">
+      <section class="advantages container">
         <h2 class="advantages__title">Как это работает</h2>
         <ul class="advantages__list">
           <li class="advantages__item  advantages__item--useful">
@@ -101,44 +99,51 @@
       </section>
 
       <section class="instance">
-        <h2 class="instance__title">Живой пример</h2>
-        <p class="instance__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-        <dl class="instance__result">
-          <div class="instance__result-item">
-            <dt class="instance__result-number">5 КГ</dt>
-            <dd class="instance__result-description">снижение веса</dd>
+          <h2 class="instance__title">Живой пример</h2>
+          <p class="instance__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+
+          <div class="instance__result-wrap">
+            <dl class="instance__result">
+              <div class="instance__result-item">
+                <dt class="instance__result-number">5 КГ</dt>
+                <dd class="instance__result-description">снижение веса</dd>
+              </div>
+              <div class="instance__result-item">
+                <dt class="instance__result-number">60 ДНЕЙ</dt>
+                <dd class="instance__result-description">затрачено времени</dd>
+              </div>
+            </dl>
+            <p class="instance__text">
+              <span>Затраты на питание:</span>
+              <span>15 000 РУБ.</span>
+            </p>
           </div>
-          <div class="instance__result-item">
-            <dt class="instance__result-number">60 ДНЕЙ</dt>
-            <dd class="instance__result-description">затрачено времени</dd>
+
+          <div class="instance__images">
+            <picture>
+              <source width="560" height="512" type="image/jpeg" media="(min-width:768px)" srcset="images/cat-before-tablet@1x.png 1x, images/cat-before-tablet@2x.png 2x">
+              <img class="instance__image instance__image--before" src="images/cat-before-mobile@1x.png" srcset="images/cat-before-mobile@2x.png 2x" width="280" height="256" alt="Упитанный кот.">
+            </picture>
+            <picture>
+              <source width="560" height="512" type="image/jpeg" media="(min-width:768px)" srcset="images/cat-after-tablet@1x.png 1x, images/cat-after-tablet@2x.png 2x">
+              <img class="instance__image instance__image--after" src="images/cat-after-mobile@1x.png" srcset="images/cat-after-mobile@2x.png 2x" width="280" height="256" alt="Стройный кот.">
+            </picture>
+            <button class="instance__toggle" type="button">
+              <svg width="40" height="40" aria-hidden="true" focusable="false">
+                <use href="images/sprite.svg#range-circle"></use>
+              </svg>
+              <span class="visually-hidden">Ползунок слайдера</span>
+            </button>
           </div>
-        </dl>
-        <p class="instance__text">
-          <span>Затраты на питание:</span>
-          <span>15 000 РУБ.</span></p>
-        <div class="instance__images">
-          <picture>
-            <source width="560" height="512" type="image/jpeg" media="(min-width:768px)" srcset="images/cat-before-tablet@1x.jpg 1x, images/cat-before-tablet@2x.jpg 2x">
-            <img class="instance__image instance__image--before" src="images/cat-before-mobile@1x.jpg" srcset="images/cat-before-mobile@2x.jpg 2x" width="280" height="256" alt="Упитанный кот.">
-          </picture>
-          <picture>
-            <source width="560" height="512" type="image/jpeg" media="(min-width:768px)" srcset="images/cat-after-tablet@1x.jpg 1x, images/cat-after-tablet@2x.jpg 2x">
-            <img class="instance__image instance__image--after" src="images/cat-after-mobile@1x.jpg" srcset="images/cat-after-mobile@2x.jpg 2x" width="280" height="256" alt="Стройный кот.">
-          </picture>
-          <button class="instance__toggle" type="button">
-            <svg width="40" height="40" aria-hidden="true" focusable="false">
-              <use href="images/sprite.svg#range-circle"></use>
-            </svg>
-            <span class="visually-hidden">Ползунок слайдера</span>
-          </button>
-        </div>
       </section>
 
       <article class="contacts">
-        <h2 class="contacts__title">приглашаем к сотрудничеству дилеров!</h2>
-        <address class="contacts__address">ул. Большая <br>Конюшенная, д. 19/8
-          <p>Санкт-Петербург</p>
-        </address>
+        <div class="contacts__wrap container">
+          <h2 class="contacts__title">приглашаем <br>к сотрудничеству дилеров!</h2>
+          <address class="contacts__address">ул. Большая <br>Конюшенная, д. 19/8
+            <p>Санкт-Петербург</p>
+          </address>
+        </div>
         <picture>
           <source width="1440" height="400" type="image/png" media="(min-width:1440px)" srcset="images/location-desktop@1x.png 1x, images/location-desktop@2x.png 2x">
           <source width="768" height="400" type="image/png" media="(min-width:768px)" srcset="images/location-tablet@1x.png 1x, images/location-tablet@2x.png 2x">

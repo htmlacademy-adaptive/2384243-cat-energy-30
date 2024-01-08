@@ -1,3 +1,13 @@
-body { //временный стиль
-  background-color: $white;
+.main-container {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 249px);
+    column-gap: 75px;
+    max-width: 1220px;
+    margin: 0 auto;
+  }
+
+  .contacts__wrap {
+    background-color: $white;
+  }
 }
