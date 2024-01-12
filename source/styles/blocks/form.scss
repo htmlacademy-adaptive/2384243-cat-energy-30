@@ -9,18 +9,17 @@
     font-size: 20px;
     line-height: normal;
 
-    padding-left: 40px;
-    padding-right: 40px;
+    //padding-left: 40px;
+    //padding-right: 40px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 0;
-    padding-right: 0;
+    //padding-left: 0;
+    //padding-right: 0;
   }
 }
 
 .form__header {
-  margin: 0;
   color: $title-text;
   font-size: 36px;
   line-height: 36px;
@@ -48,7 +47,6 @@
   line-height: 18px;
   text-transform: uppercase;
 
-  margin: 0;
   margin-bottom: 39px;
 
   @media (min-width: $tablet-width) {
@@ -65,22 +63,35 @@
 }
 
 .form__data-wrapper {
+  @media (min-width: $tablet-width) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 75px;
 
     margin-bottom: 70px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
 .form__owner-contacts {
   border: none;
   padding: 0;
+  position: relative;
 
   @media (min-width: $desktop-width) {
     margin-bottom: 70px;
   }
+}
+
+.form__comment,
+.form__control {
+  position: relative;
 }
 
 .form__legend {
@@ -89,16 +100,18 @@
   line-height: 26px;
   text-transform: initial;
 
-  &--owner-contacts {
-    margin-bottom: 35px;
-  }
+  background-color: $white;
+  padding-left: 20px;
+  padding-right: 20px;
 
-  &--comment {
-    margin-bottom: 28px;
-  }
-
-  &--control {
-    margin-bottom: 34px;
+  &::after {
+    content: "";
+    position: absolute;
+    border-bottom: 2px solid $green;
+    width: 100%;
+    right: 0;
+    top: 15px;
+    z-index: -1;
   }
 
   @media (min-width: $tablet-width) {
@@ -106,6 +119,12 @@
     line-height: 36px;
 
     padding-left: 40px;
+    padding-right: 40px;
+    margin-left: 30px;
+
+    &::after {
+      top: 22px;
+    }
 
     &--owner-contacts {
       margin-bottom: 76px;
@@ -117,14 +136,33 @@
 
     &--control {
       margin-bottom: 57px;
-      padding-left: 0;
     }
   }
 
   @media (min-width: $desktop-width) {
+    margin-left: 70px;
+
     &--comment {
       margin-bottom: 78px;
     }
+  }
+
+  &--owner-contacts {
+    margin-bottom: 35px;
+
+    @media (min-width: $tablet-width) {
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &--comment {
+    margin-bottom: 28px;
+  }
+
+  &--control {
+    margin-bottom: 34px;
   }
 }
 
@@ -136,11 +174,15 @@
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     margin-bottom: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   @media (min-width: $desktop-width) {
     gap: 75px;
     margin-bottom: 79px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -152,7 +194,6 @@
     line-height: 26px;
 
     margin-bottom: 0;
-    margin-left: 40px;
     width: 284px;
   }
 

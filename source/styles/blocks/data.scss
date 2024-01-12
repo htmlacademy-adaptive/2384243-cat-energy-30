@@ -10,18 +10,20 @@
     gap: 20px 13px;
     margin-bottom: 72px;
 
-    padding-left: 40px;
-    padding-right: 40px;
+    &--owner-contacts {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 0;
-    padding-right: 0;
     margin-bottom: 0;
 
     &--owner-contacts {
       display: grid;
       grid-template-columns: auto 1fr auto 1fr;
+      padding-left: 0;
+      padding-right: 0;
       //gap: 75px;
     }
   }

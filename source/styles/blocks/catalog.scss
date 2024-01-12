@@ -1,6 +1,15 @@
 .catalog {
+  margin-bottom: 25px;
+
   @media (min-width: $tablet-width) {
+    width: 708px;
+    margin: 0 auto;
     margin-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+    margin: 0 auto;
   }
 }
 
@@ -25,6 +34,9 @@
   display: flex;
   flex-direction: column;
   padding: 25px 0;
+
+  border-top: 1px solid $border-catalog;
+  border-bottom: 1px solid $border-catalog;
 
   h3 {
     color: $catalog-text;
@@ -52,6 +64,8 @@
     padding: 50px 20px 40px;
     width: 324px;
 
+    border: 1px solid $light-grey;
+
     h3 {
       font-size: 20px;
       line-height: 24px;
@@ -72,7 +86,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 80px;
+    margin-top: 70px;
     padding: 50px 20px 40px;
     width: 245px;
 

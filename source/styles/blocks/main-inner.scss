@@ -1,4 +1,22 @@
 .main-inner {
+  padding-top: 27px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid $border-b-mobile;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      content: none;
+    }
+  }
+
   .contacts__wrap {
     background-color: $light-grey;
 
@@ -9,18 +27,17 @@
 }
 
 .main-inner__header {
-  margin: 0;
   color: $title-text;
   font-family: $secondary-ff;
   font-size: 36px;
   line-height: 36px;
 
-  padding: 27px 30px 41px;
+  margin-bottom: 41px;
 
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
 
-    padding: 0 0 84px;
+    margin-bottom: 84px;
   }
 }
