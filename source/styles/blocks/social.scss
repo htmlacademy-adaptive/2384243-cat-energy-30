@@ -52,15 +52,23 @@
 .social__link {
   color: $dark-grey;
 
-  &:hover {
-    color: $green;
-  }
-
-  &:focus {
-    color: $green;
-  }
-
   &:active {
+    color: $green;
     opacity: 0.3;
+  }
+
+  @media (min-width: $desktop-width) {
+    &:hover {
+      color: $green;
+    }
+
+    &:focus {
+      color: $green;
+    }
+
+    &:active {
+      color: $green;
+      opacity: 0.3;
+    }
   }
 }

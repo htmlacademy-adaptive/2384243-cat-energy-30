@@ -9,13 +9,13 @@
     font-size: 20px;
     line-height: normal;
 
-    //padding-left: 40px;
-    //padding-right: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   @media (min-width: $desktop-width) {
-    //padding-left: 0;
-    //padding-right: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -82,16 +82,10 @@
 .form__owner-contacts {
   border: none;
   padding: 0;
-  position: relative;
 
   @media (min-width: $desktop-width) {
     margin-bottom: 70px;
   }
-}
-
-.form__comment,
-.form__control {
-  position: relative;
 }
 
 .form__legend {
@@ -100,6 +94,7 @@
   line-height: 26px;
   text-transform: initial;
 
+  position: relative;
   background-color: $white;
   padding-left: 20px;
   padding-right: 20px;
@@ -108,8 +103,9 @@
     content: "";
     position: absolute;
     border-bottom: 2px solid $green;
-    width: 100%;
-    right: 0;
+    width: 100vw;
+    //right: 0;
+    right: calc((100vw - 100%)/(-2));
     top: 15px;
     z-index: -1;
   }
@@ -120,10 +116,10 @@
 
     padding-left: 40px;
     padding-right: 40px;
-    margin-left: 30px;
 
     &::after {
       top: 22px;
+      right: calc((100vw - 708px)/(-2));
     }
 
     &--owner-contacts {
@@ -140,7 +136,13 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 70px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: -40px;
+
+    &::after {
+      right: calc((100vw - 1220px)/(-2));
+    }
 
     &--comment {
       margin-bottom: 78px;

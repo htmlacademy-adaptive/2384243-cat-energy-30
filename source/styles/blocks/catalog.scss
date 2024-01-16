@@ -10,6 +10,7 @@
   @media (min-width: $desktop-width) {
     width: 1220px;
     margin: 0 auto;
+    margin-bottom: 76px;
   }
 }
 
@@ -33,7 +34,7 @@
 .catalog__show-more {
   display: flex;
   flex-direction: column;
-  padding: 25px 0;
+  padding: 25px 20px;
 
   border-top: 1px solid $border-catalog;
   border-bottom: 1px solid $border-catalog;
@@ -86,7 +87,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 70px;
+    margin-top: 80px;
     padding: 50px 20px 40px;
     width: 245px;
 
@@ -95,7 +96,7 @@
     }
 
     p {
-      margin-bottom: 90px;
+      margin-bottom: 60px;
     }
   }
 }
@@ -125,6 +126,8 @@
 }
 
 .catalog__button {
+  width: 280px;
+
   @media (min-width: $desktop-width) {
     width: 100%;
   }

@@ -1,22 +1,24 @@
 .main-footer {
   background-color: $light-grey;
+}
 
+.main-footer__wrap {
   display: flex;
   flex-direction: column;
-  padding: 40px 20px;
-  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
-    padding: 55px 30px;
+    padding-top: 55px;
+    padding-bottom: 55px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 66px 110px;
-    width: 1440px;
+    padding: 66px 0;
   }
 }
 
@@ -30,6 +32,17 @@
     svg {
       width: 128px;
       height: 24px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &:hover,
+    &:focus {
+      fill: $footer-hover;
+    }
+
+    &:active {
+      color: $footer-active;
     }
   }
 }

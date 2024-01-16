@@ -14,11 +14,31 @@
   margin: 0 auto;
   padding: 10px 44px;
 
+  &:active {
+    background-color: $dark-green;
+    opacity: 0.3;
+  }
+
+  @media (min-width: $desktop-width) {
+    &:hover {
+      background-color: $dark-green;
+    }
+  }
+
   &--secondary {
     color: $main-text;
 
     width: 250px;
-
     background: $light-grey;
+
+    &:active {
+      background-color: $border-catalog;
+    }
+
+    @media (min-width: $desktop-width) {
+      &:hover {
+        background-color: $border-catalog;
+      }
+    }
   }
 }

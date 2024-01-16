@@ -15,6 +15,7 @@
     );
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     right: 0;
     top: 65px;
     width: 100%;
@@ -47,6 +48,9 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 134px;
+    min-height: 611px;
+    padding-left: calc((100vw - 1220px)/2);
+    padding-right: calc((100vw - 1220px)/2);
 
     &::before {
       background-image:
@@ -56,11 +60,10 @@
     url("../../images/bg-main-desktop@1x.jpg") type("image/jpg") 1x,
     url("../../images/bg-main-desktop@2x.jpg") type("image/jpg") 2x
     );
-      background-size: 702px 694px;
       background-position: right;
       top: 0;
       left: 50%;
-      width: 702px;
+      width: auto;
       height: 694px;
       z-index: -1;
     }
@@ -69,7 +72,7 @@
       background-color: $light-green;
       top: 0;
       left: 50%;
-      width: 702px;
+      width: auto;
       height: 694px;
       z-index: -1;
     }
@@ -89,6 +92,7 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 110px;
+    position: relative;
   }
 }
 
@@ -108,7 +112,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 190px;
+    padding-left: 80px;
   }
 }
 
@@ -128,7 +132,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 190px;
+    padding-left: 80px;
     margin: 0;
   }
 }
@@ -141,7 +145,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: -250px 0 0 555px;
+    position: absolute;
+    right: 221px;
+    top: 29px;
+    margin: 0;
   }
 }
 
@@ -158,7 +165,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    left: 190px;
+    left: 80px;
     top: 342px;
   }
 }

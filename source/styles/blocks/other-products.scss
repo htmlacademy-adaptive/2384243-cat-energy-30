@@ -1,5 +1,16 @@
 .other-products {
-  position: relative;
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 708px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+    margin: 0 auto;
+  }
 }
 
 .other-products__header {
@@ -9,19 +20,24 @@
   line-height: 24px;
   text-align: left;
 
-  display: inline;
+  position: relative;
   margin: 0;
   background-color: $white;
-  padding-left: 20px;
-  padding-right: 20px;
+  //padding-left: calc((100vw - 280px)/2);
+  //padding-left: 20px;
+  //padding-right: 20px;
+  width: fit-content;
+  box-shadow: -20px 0 0 $white, 20px 0 0 $white;
 
   &::before {
     content: "";
     position: absolute;
-    border-bottom: 2px solid $green;
-    width: 100%;
+    background: $green;
+    height: 2px;
+    width: 100vw;
     right: 0;
     top: 15px;
+    box-shadow: 100vw 0 0 $green;
     z-index: -1;
   }
 
@@ -62,7 +78,6 @@
 }
 
 .other-products__list {
-  margin: 0;
   padding: 0;
   list-style: none;
 

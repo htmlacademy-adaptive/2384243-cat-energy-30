@@ -43,8 +43,12 @@
   border: 1px solid $border-input;
   padding: 14px 15px 13px 15px;
 
-  @media (min-width: $tablet-width) {
-    padding: 11px 10px 11px 20px;
+  &:focus {
+    border-color: $main-text;
+  }
+
+  &:active {
+    border-color: $red;
   }
 
   &--email {
@@ -60,9 +64,8 @@
       background-color: $green;
     }
 
-    &:invalid {
+    &:active {
       background-color: $red;
-      border-color: $red;
     }
   }
 
@@ -79,9 +82,19 @@
       background-color: $green;
     }
 
-    &:invalid {
+    &:active {
       background-color: $red;
-      border-color: $red;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 11px 10px 11px 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    &:hover {
+      border-color: $border-checkbox;
     }
   }
 }
+

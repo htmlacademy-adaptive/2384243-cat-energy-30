@@ -7,7 +7,6 @@
       <defs><clipPath id="a"><path fill="#fff" d="M0 0h101v18h-101z"/></clipPath></defs>
     </svg>
 
-
     <svg viewBox="0 0 24 24" id="nav-burger" fill="none" width="24" height="24">
       <path stroke="#000" stroke-width="2" d="M0 3h24m-24 8h24m-24 8h24"/>
     </svg>

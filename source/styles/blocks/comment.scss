@@ -12,7 +12,7 @@
 .comment__wrap {
   @media (min-width: $tablet-width) {
     padding-left: 40px;
-    padding-right: 40px;
+    //padding-right: 40px;
   }
 
   @media (min-width: $desktop-width) {
@@ -27,7 +27,7 @@
   line-height: 18px;
   text-transform: uppercase;
 
-  width: 280px;
+  width: 100%;
   min-height: 150px;
   padding: 14px 14px 14px 15px;
 
@@ -37,7 +37,7 @@
     font-size: 20px;
     line-height: 30px;
 
-    width: 628px;
+    width: 94%;
     min-height: 175px;
     padding: 11px 20px;
   }
