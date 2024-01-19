@@ -82,6 +82,7 @@
 .form__owner-contacts {
   border: none;
   padding: 0;
+  margin: 0;
 
   @media (min-width: $desktop-width) {
     margin-bottom: 70px;
@@ -94,19 +95,21 @@
   line-height: 26px;
   text-transform: initial;
 
+  padding: 0;
   position: relative;
+  width: fit-content;
   background-color: $white;
-  padding-left: 20px;
-  padding-right: 20px;
+  box-shadow: -20px 0 0 $white, 20px 0 0 $white;
 
   &::after {
     content: "";
     position: absolute;
-    border-bottom: 2px solid $green;
+    background: $green;
+    height: 2px;
     width: 100vw;
-    //right: 0;
-    right: calc((100vw - 100%)/(-2));
+    right: 0;
     top: 15px;
+    box-shadow: 100vw 0 0 $green;
     z-index: -1;
   }
 
@@ -114,57 +117,65 @@
     font-size: 36px;
     line-height: 36px;
 
-    padding-left: 40px;
-    padding-right: 40px;
+    margin-left: 40px;
+    box-shadow: -40px 0 0 $white, 40px 0 0 $white;
 
     &::after {
       top: 22px;
-      right: calc((100vw - 708px)/(-2));
     }
 
-    &--owner-contacts {
-      margin-bottom: 76px;
-    }
-
-    &--comment {
-      margin-bottom: 87px;
-    }
-
-    &--control {
-      margin-bottom: 57px;
+    br {
+      display: none;
     }
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 40px;
-    padding-right: 40px;
-    margin: -40px;
-
-    &::after {
-      right: calc((100vw - 1220px)/(-2));
-    }
-
-    &--comment {
-      margin-bottom: 78px;
-    }
+    margin-left: 0;
   }
 
   &--owner-contacts {
     margin-bottom: 35px;
 
     @media (min-width: $tablet-width) {
-      br {
-        display: none;
-      }
+      margin-bottom: 76px;
     }
   }
 
   &--comment {
     margin-bottom: 28px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 87px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 78px;
+    }
   }
 
   &--control {
     margin-bottom: 34px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 57px;
+    }
+  }
+}
+
+.form__owner-contacts-wrapper {
+  @media (min-width: $tablet-width) {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 0;
+    gap: 80px;
   }
 }
 
@@ -172,6 +183,7 @@
   margin-bottom: 32px;
 
   @media (min-width: $tablet-width) {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
@@ -195,6 +207,7 @@
     font-size: 20px;
     line-height: 26px;
 
+    margin-left: 0;
     margin-bottom: 0;
     width: 284px;
   }

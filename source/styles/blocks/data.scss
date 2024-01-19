@@ -9,86 +9,83 @@
   @media (min-width: $tablet-width) {
     gap: 20px 13px;
     margin-bottom: 72px;
-
-    &--owner-contacts {
-      padding-left: 40px;
-      padding-right: 40px;
-    }
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
+  }
 
-    &--owner-contacts {
-      display: grid;
-      grid-template-columns: auto 1fr auto 1fr;
-      padding-left: 0;
-      padding-right: 0;
-      //gap: 75px;
+  &--field-wrapper {
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+
+      position: absolute;
+      right: 13px;
+      top: 13px;
+
+      mask-image: url("../../images/icons/stack.svg#email");
+      mask-repeat: no-repeat;
+      background-color: $title-text;
+      mask-size: 20px 20px;
+    }
+
+    @media (min-width: $tablet-width) {
+      gap: 13px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &--field-wrapper-tel {
+    &::after {
+      mask-image: url("../../images/icons/stack.svg#phone");
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-top: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 0;
+    }
+  }
+
+  &:focus-within {
+    &::after {
+      background-color: $green;
+    }
+  }
+
+  &:invalid {
+    &::after {
+      background-color: $red;
     }
   }
 }
 
 .data__label {
   align-self: center;
-
-  &--tel {
-    @media (min-width: $desktop-width) {
-      margin-left: 75px;
-    }
-  }
 }
 
 .data__field {
   border: 1px solid $border-input;
-  padding: 14px 15px 13px 15px;
+  padding: 16px 15px 13px;
 
   &:focus {
     border-color: $main-text;
   }
 
-  &:active {
-    border-color: $red;
-  }
-
-  &--email {
-    padding-right: 49px;
-    mask-image: url("../../images/icons/stack.svg#email");
-    mask-repeat: no-repeat;
-    background-color: $title-text;
-    mask-size: 20px 20px;
-    mask-position: right 30px top 13px;
-    border: 1px solid $border-checkbox;
-
-    &:focus {
-      background-color: $green;
-    }
-
-    &:active {
-      background-color: $red;
-    }
-  }
-
-  &--tel {
-    padding-right: 49px;
-    mask-image: url("../../images/icons/stack.svg#phone");
-    mask-repeat: no-repeat;
-    background-color: $title-text;
-    mask-size: 20px 20px;
-    mask-position: right 30px top 13px;
-    border: 1px solid $border-checkbox;
-
-    &:focus {
-      background-color: $green;
-    }
-
-    &:active {
-      background-color: $red;
-    }
+  &:invalid {
+    //border-color: $red;
   }
 
   @media (min-width: $tablet-width) {
-    padding: 11px 10px 11px 20px;
+    padding: 16px 10px 13px 20px;
   }
 
   @media (min-width: $desktop-width) {
@@ -98,3 +95,6 @@
   }
 }
 
+.data__error {
+  //border-color: $red;
+}

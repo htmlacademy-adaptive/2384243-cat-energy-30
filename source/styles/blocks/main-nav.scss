@@ -156,6 +156,10 @@
     padding: 0;
     position: relative;
 
+    &:active {
+      opacity: 0.3;
+    }
+
     &--current::after {
       content: "";
       position: absolute;
@@ -178,20 +182,12 @@
       opacity: 0.6;
     }
 
-    &:visited {
-      opacity: 0.3;
-    }
-
     &--index {
       color: $white;
 
       &:hover {
         border: none;
         opacity: 0.6;
-      }
-
-      &:visited {
-        opacity: 0.3;
       }
     }
   }

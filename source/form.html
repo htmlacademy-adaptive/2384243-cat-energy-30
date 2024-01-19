@@ -31,13 +31,8 @@
       <nav class="main-nav main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
-        <!--
-          <svg class="main-nav__nav-burger" width="24" height="24">
-            <use href="images/sprite.svg#nav-burger"></use>
-          </svg>
-        -->
         </button>
-        <div class="main-nav__wrapper">
+        <!--<div class="main-nav__wrapper">-->
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a class="main-nav__link" href="index.html">главная</a>
@@ -49,7 +44,7 @@
               <a class="main-nav__link  main-nav__link--current" href="#">подбор программы</a>
             </li>
           </ul>
-        </div>
+        <!--</div>-->
       </nav>
 
     </header>
@@ -69,20 +64,16 @@
             <fieldset class="data">
               <legend class="visually-hidden">Данные питомца</legend>
               <label class="data__label" for="name">ИМЯ:*</label>
-              <input class="data__field" type="text" id="name" name="name" placeholder="барсик" required>
-
-              <!--состояние error задано как active-->
+              <input class="data__field data__error" type="text" id="name" name="name" placeholder="барсик" required>
+              <!--класс data__error задан для состояния error-->
 
               <label class="data__label" for="weight">Вес (кг):*</label>
-              <input class="data__field" type="number" id="weight" name="weight" placeholder="7" required>
-
-              <!--состояние error задано как active-->
+              <input class="data__field data__error" type="number" id="weight" name="weight" placeholder="7" required>
+              <!--класс data__error задан для состояния error-->
 
               <label class="data__label" for="age">Возраст (лет):</label>
-              <input class="data__field" type="number" id="age" name="age" placeholder="7">
-
-              <!--состояние error задано как active-->
-
+              <input class="data__field data__error" type="number" id="age" name="age" placeholder="7">
+              <!--класс data__error задан для состояния error-->
             </fieldset>
 
             <fieldset class="control">
@@ -119,16 +110,19 @@
               Контактные данные
               <br>(владельца кота)
             </legend>
-            <div class="data data--owner-contacts">
-              <label class="data__label data__label--email" for="email">E-mail:*</label>
-              <input class="data__field data__field--email" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
+            <div class="form__owner-contacts-wrapper">
 
-              <!--состояние error задано как active-->
+              <p class="data data--field-wrapper">
+                <label class="data__label" for="email">E-mail:*</label>
+                <input class="data__field data__error" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
+                <!--класс data__error задан для состояния error-->
+              </p>
 
-              <label class="data__label data__label--tel" for="tel">Телефон:*</label>
-              <input class="data__field data__field--tel" type="tel" id="tel" name="tel" placeholder="8 (960) 900-60-90" required>
-
-              <!--состояние error задано как active-->
+              <p class="data data--field-wrapper data--field-wrapper-tel">
+                <label class="data__label data__label--tel" for="tel">Телефон:*</label>
+                <input class="data__field data__error" type="tel" id="tel" name="tel" placeholder="8 (960) 900-60-90" required>
+                <!--класс data__error задан для состояния error-->
+              </p>
 
             </div>
           </fieldset>
@@ -190,6 +184,7 @@
             <p>Санкт-Петербург</p>
           </address>
         </div>
+
         <iframe src="ghttps://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257197763!2d30.320472476699383!3d59.93871916209425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1704739353243!5m2!1sru!2sru"
           width="600"
           height="450"
@@ -207,8 +202,8 @@
 
       <div class="main-footer__wrap container">
 
-        <a class="main-footer__wordmark logo" href="#">
-          <svg class="logo__wordmark" width="128" height="24" role="img">
+        <a class="main-footer__wordmark" href="#">
+          <svg width="128" height="24" role="img">
             <use href="images/sprite.svg#logo-wordmark"></use>
           </svg>
           <span class="visually-hidden">Логотип Cat Energy</span>

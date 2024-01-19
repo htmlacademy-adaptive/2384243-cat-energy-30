@@ -151,17 +151,17 @@
 
   margin: 0;
   position: absolute;
-  left: 22px;
-  top: 46px;
+  top: 50%;
+  transform: translateY(50%);
   background-color: $bg-cats-grey;
   padding: 0 8px;
+  margin-top: 7px;
 
   @media (min-width: $tablet-width) {
     font-size: 14px;
 
     background-color: $white;
-    left: 24px;
-    top: 63px;
+    margin-top: 20px;
 
     br {
       display: none;
