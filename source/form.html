@@ -14,7 +14,7 @@
 
   <body class="page__body">
 
-    <header class="main-header container">
+    <header class="main-header">
 
       <a class="main-header__logo logo" href="index.html">
         <picture>
@@ -32,19 +32,17 @@
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <!--<div class="main-nav__wrapper">-->
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="index.html">главная</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="catalog.html">каталог продукции</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link  main-nav__link--current" href="#">подбор программы</a>
-            </li>
-          </ul>
-        <!--</div>-->
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="index.html">главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html">каталог продукции</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link  main-nav__link--current" href="#">подбор программы</a>
+          </li>
+        </ul>
       </nav>
 
     </header>
@@ -62,18 +60,18 @@
           <div class="form__data-wrapper">
 
             <fieldset class="data">
+            <!-- для состояния error необходимо добавить модификатор data--error -->
+
               <legend class="visually-hidden">Данные питомца</legend>
               <label class="data__label" for="name">ИМЯ:*</label>
-              <input class="data__field data__error" type="text" id="name" name="name" placeholder="барсик" required>
-              <!--класс data__error задан для состояния error-->
+              <input class="data__field" type="text" id="name" name="name" placeholder="барсик" required>
 
               <label class="data__label" for="weight">Вес (кг):*</label>
-              <input class="data__field data__error" type="number" id="weight" name="weight" placeholder="7" required>
-              <!--класс data__error задан для состояния error-->
+              <input class="data__field" type="number" id="weight" name="weight" placeholder="7" required>
 
               <label class="data__label" for="age">Возраст (лет):</label>
-              <input class="data__field data__error" type="number" id="age" name="age" placeholder="7">
-              <!--класс data__error задан для состояния error-->
+              <input class="data__field" type="number" id="age" name="age" placeholder="7">
+
             </fieldset>
 
             <fieldset class="control">
@@ -113,15 +111,15 @@
             <div class="form__owner-contacts-wrapper">
 
               <p class="data data--field-wrapper">
+              <!-- для состояния error необходимо добавить модификатор data--error -->
                 <label class="data__label" for="email">E-mail:*</label>
-                <input class="data__field data__error" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
-                <!--класс data__error задан для состояния error-->
+                <input class="data__field" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
               </p>
 
               <p class="data data--field-wrapper data--field-wrapper-tel">
+              <!-- для состояния error необходимо добавить модификатор data--error -->
                 <label class="data__label data__label--tel" for="tel">Телефон:*</label>
-                <input class="data__field data__error" type="tel" id="tel" name="tel" placeholder="8 (960) 900-60-90" required>
-                <!--класс data__error задан для состояния error-->
+                <input class="data__field" type="tel" id="tel" name="tel" placeholder="8 (960) 900-60-90" required>
               </p>
 
             </div>

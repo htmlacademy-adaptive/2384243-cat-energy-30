@@ -2,21 +2,6 @@
   padding-top: 27px;
   position: relative;
 
-  &::before {
-    content: "";
-    position: absolute;
-    border-bottom: 1px solid $border-b-mobile;
-    width: 100%;
-    left: 0;
-    top: 0;
-  }
-
-  @media (min-width: $tablet-width) {
-    &::before {
-      content: none;
-    }
-  }
-
   .contacts__wrap {
     background-color: $light-grey;
 
