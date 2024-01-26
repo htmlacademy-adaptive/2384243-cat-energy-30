@@ -63,6 +63,7 @@
 .control__label {
   position: relative;
   padding-left: 45px;
+  display: block;
 
   &:disabled {
     opacity: 0.3;

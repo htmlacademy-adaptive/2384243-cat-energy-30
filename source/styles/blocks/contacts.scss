@@ -55,13 +55,15 @@
 .contacts__wrap {
   padding: 26px 20px;
 
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2%;
   align-items: center;
   background-color: $light-grey;
 
   @media (min-width: $tablet-width) {
     padding: 60px 70px;
+    gap: 50px;
   }
 
   @media (min-width: $desktop-width) {

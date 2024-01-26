@@ -25,11 +25,16 @@
   width: 280px;
 
   @media (min-width: $tablet-width) {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: 37px 1fr 37px;
+    grid-template-rows: 210px 1fr;
     width: 100%;
-    padding: 0 37px 40px 37px;
+    height: 100%;
+    padding: 0 0 40px;
     background-image: linear-gradient($white 15%, $light-grey 15%);
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 38px 1fr 38px;
   }
 }
 
@@ -39,6 +44,9 @@
   align-self: center;
 
   @media (min-width: $tablet-width) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin: 0 auto;
     margin-bottom: 22px;
   }
 }
@@ -59,8 +67,9 @@
 
   @media (min-width: $tablet-width) {
     text-align: center;
-    margin-bottom: 20px;
+    //margin-bottom: 20px;
     align-self: center;
+    grid-column: 2/3;
 
     br {
       display: none;
@@ -69,7 +78,8 @@
     h3 {
       font-size: 20px;
       line-height: 24px;
-      width: 135px;
+      width: 50%;
+      margin: 0 auto;
     }
   }
 
@@ -91,29 +101,35 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-bottom: 21px;
+  align-items: center;
 
   dd {
     margin: 0;
     text-align: right;
   }
 
+  dt {
+    position: relative;
+
+    @media (min-width: $tablet-width) {
+      &::after {
+        content: "";
+        position: absolute;
+        border-bottom: 1px solid $border-checkbox;
+        width: 250px;
+        left: 0;
+        bottom: -5px;
+        //box-shadow: 0 -30px 0 0 $border-checkbox, 0 -60px 0 0 $border-checkbox;
+      }
+    }
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 20px;
 
+    grid-column: 2/3;
     gap: 10px;
-
-    position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      border-bottom: 1px solid $border-checkbox;
-      width: 100%;
-      left: 0;
-      bottom: -5px;
-      box-shadow: 0 -30px 0 0 $border-checkbox, 0 -60px 0 0 $border-checkbox;
-    }
   }
 }
 
@@ -122,5 +138,6 @@
 
   @media (min-width: $tablet-width) {
     width: 100%;
+    grid-column: 2/3;
   }
 }

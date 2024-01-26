@@ -63,7 +63,6 @@
   @media (min-width: $tablet-width) {
     margin-top: 82px;
     padding: 50px 20px 40px;
-    width: 324px;
 
     border: 1px solid $light-grey;
 
@@ -72,7 +71,7 @@
       line-height: 24px;
 
       margin-bottom: 23px;
-      width: 134px;
+      //width: 134px;
       align-self: center;
     }
 
@@ -81,7 +80,7 @@
       line-height: 18px;
 
       margin-bottom: 62px;
-      width: 170px;
+      //width: 170px;
       align-self: center;
     }
   }
@@ -89,7 +88,7 @@
   @media (min-width: $desktop-width) {
     margin-top: 80px;
     padding: 50px 20px 40px;
-    width: 245px;
+    //width: 245px;
 
     h3 {
       margin-bottom: 26px;
@@ -97,6 +96,15 @@
 
     p {
       margin-bottom: 60px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .catalog__show-more h3,
+  .catalog__show-more p {
+    br {
+      display: none;
     }
   }
 }
@@ -132,3 +140,4 @@
     width: 100%;
   }
 }
+

@@ -71,10 +71,6 @@
       background-color: $green;
     }
   }
-
-  &--field-wrapper::after + .data__field--error {
-    background-color: $red;
-  }
 }
 
 .data__label {
@@ -82,6 +78,14 @@
 }
 
 .data__field {
+  color: $secondary-grey;
+  font-family: $secondary-ff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+
   border: 1px solid $border-input;
   padding: 16px 15px 13px;
 
@@ -89,7 +93,14 @@
     border-color: $main-text;
   }
 
+  &--error {
+    border-color: $red;
+  }
+
   @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: normal;
+
     padding: 16px 10px 13px 20px;
   }
 
