@@ -6,6 +6,28 @@
   @media (min-width: $tablet-width) {
     gap: 23px;
   }
+
+  @media (min-width: $desktop-width) {
+    &:hover svg {
+      color: $green;
+    }
+
+    &:focus svg {
+      color: $green;
+    }
+
+    &:active svg {
+      color: $green;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  svg {
+    color: $dark-grey;
+  }
 }
 
 .copyright-link__name {
@@ -15,28 +37,7 @@
 
   margin: 0;
 
-  &:active {
-    opacity: 0.3;
-  }
-
   @media (min-width: $tablet-width) {
     padding-left: 5px;
-  }
-}
-
-.copyright-link__logo {
-  color: $dark-grey;
-
-  &:hover {
-    color: $green;
-  }
-
-  &:focus {
-    color: $green;
-  }
-
-  &:active {
-    color: $green;
-    opacity: 0.3;
   }
 }

@@ -1,8 +1,7 @@
 .features {
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column: 1/-1;
+    grid-template-columns: 47% 47%;
     gap: 75px;
 
     margin-bottom: 71px;
@@ -13,7 +12,7 @@
   position: relative;
   background-color: $light-grey;
   margin-bottom: 20px;
-  padding: 30px 33px 18px 20px;
+  padding: 30px 20px 18px 20px;
 
   &--slim {
     margin-bottom: 30px;
@@ -44,7 +43,8 @@
         width: 200px;
         height: 200px;
         top: 92px;
-        left: 70%;
+        left: auto;
+        right: 63px;
       }
 
       &::after {
@@ -52,7 +52,8 @@
         width: 140px;
         height: 194px;
         top: 81px;
-        left: 75%;
+        left: auto;
+        right: 93px;
       }
     }
 
@@ -60,16 +61,16 @@
       &::before {
         width: 100px;
         height: 100px;
-        top: 0;
-        left: 0;
+        top: 47px;
+        left: 52px;
       }
 
       &::after {
         background: url("../../images/icons/stack.svg#cat-slim") no-repeat center/70px 97px;
         width: 70px;
         height: 97px;
-        top: -5px;
-        left: 5px;
+        top: 41px;
+        left: 67px;
       }
     }
   }
@@ -101,7 +102,8 @@
         width: 200px;
         height: 200px;
         top: 91px;
-        left: 70%;
+        left: auto;
+        right: 63px;
       }
 
       &::after {
@@ -109,7 +111,8 @@
         width: 268px;
         height: 112px;
         top: 135px;
-        left: 65%;
+        left: auto;
+        right: 29px;
       }
     }
 
@@ -117,16 +120,16 @@
       &::before {
         width: 100px;
         height: 100px;
-        top: 0;
-        left: 0;
+        top: 47px;
+        left: 52px;
       }
 
       &::after {
         background: url("../../images/icons/stack.svg#cat-pro") no-repeat center/134px 56px;
         width: 134px;
         height: 56px;
-        top: 10px;
-        left: -10px;
+        top: 67px;
+        left: 33px;
       }
     }
   }
@@ -200,36 +203,41 @@
   color: $title-text;
   text-transform: uppercase;
 
-  display: block;
-
+  display: inline-block;
+  position: relative;
+  margin-right: 30px;
 
   &::after {
     content: "";
     position: absolute;
-    mask-image: url("../../images/icons/stack.svg#arrow");
-    mask-repeat: no-repeat;
-    background-color: $title-text;
+    background-image: url("../../images/icons/stack.svg#arrow");
+    background-repeat: no-repeat;
+    background-position: -8px;
     width: 32px;
     height: 10px;
-    left: 107px;
-    bottom: 20px;
-
-    @media (min-width: $tablet-width) {
-      left: 185px;
-      bottom: 60px;
-    }
+    right: -45px;
+    top: 3px;
   }
 
   &:hover {
-    opacity: 0.6;
+    &::after {
+      background-position: 0;
+    }
   }
 
   &:active {
+    &::after {
+      background-position: 0;
+    }
     opacity: 0.3;
   }
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: normal;
+
+    &::after {
+      top: 11px;
+    }
   }
 }

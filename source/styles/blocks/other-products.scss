@@ -1,14 +1,15 @@
 .other-products {
-  padding: 0 20px;
-  margin-bottom: 35px;
+  width: 280px;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
-    padding: 0;
-    margin-bottom: 75px;
+    width: 708px;
+    margin: 0 auto;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 87px;
+    width: 1220px;
+    margin: 0 auto;
   }
 }
 
@@ -19,84 +20,80 @@
   line-height: 24px;
   text-align: left;
 
+  position: relative;
   margin: 0;
+  background-color: $white;
+  width: fit-content;
+  box-shadow: -20px 0 0 $white, 20px 0 0 $white;
 
-  margin-bottom: 49px;
+  &::before {
+    content: "";
+    position: absolute;
+    background: $green;
+    height: 2px;
+    width: 100vw;
+    right: 0;
+    top: 15px;
+    box-shadow: 100vw 0 0 $green;
+    z-index: -1;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 36px;
 
-    margin-bottom: 80px;
-    padding-left: 70px;
+    margin-left: 40px;
+    box-shadow: -40px 0 0 $white, 40px 0 0 $white;
+
+    &::before {
+      top: 23px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
   }
 }
 
 .other-products__wrapper {
+  padding-top: 36px;
+  padding-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 80px;
+    padding-bottom: 75px;
+  }
+
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
+
+    padding-top: 80px;
+    padding-bottom: 87px;
   }
 }
 
 .other-products__list {
-  margin: 0;
   padding: 0;
   list-style: none;
 
   position: relative;
-  margin-bottom: 35px;
 
   &::before {
     content: "";
     position: absolute;
-    background-image:
-      image-set(
-    url("../../images/bg-catalog-mobile@1x.webp") type("image/webp") 1x,
-    url("../../images/bg-catalog-mobile@2x.webp") type("image/webp") 2x,
-    url("../../images/bg-catalog-mobile@1x.jpg") type("image/jpg") 1x,
-    url("../../images/bg-catalog-mobile@2x.jpg") type("image/jpg") 2x,
-  );
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    border-bottom: 1px solid $border-checkbox;
     width: 100%;
-    height: 290px;
     left: 0;
-    bottom: -295px;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    background-color: $light-green;
-    left: 0;
-    bottom: -295px;
-    width: 100%;
-    height: 290px;
-    z-index: 1;
+    top: -13px;
   }
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 70px;
     padding: 0 38px;
 
     &::before {
-      background-image:
-        image-set(
-      url("../../images/bg-catalog-tablet@1x.webp") type("image/webp") 1x,
-      url("../../images/bg-catalog-tablet@2x.webp") type("image/webp") 2x,
-      url("../../images/bg-catalog-tablet@1x.jpg") type("image/jpg") 1x,
-      url("../../images/bg-catalog-tablet@2x.jpg") type("image/jpg") 2x,
-      );
-      height: 200px;
-      bottom: -270px;
-    }
-
-    &::after {
-      height: 200px;
-      bottom: -270px;
-      z-index: 1;
+      top: -26px;
+      width: 708px;
     }
   }
 
@@ -105,28 +102,8 @@
     padding: 0;
 
     &::before {
-      background-image:
-        image-set(
-      url("../../images/bg-catalog-desktop@1x.webp") type("image/webp") 1x,
-      url("../../images/bg-catalog-desktop@2x.webp") type("image/webp") 2x,
-      url("../../images/bg-catalog-desktop@1x.jpg") type("image/jpg") 1x,
-      url("../../images/bg-catalog-desktop@2x.jpg") type("image/jpg") 2x,
-      );
-      width: 245px;
-      height: 288px;
-      left: 975px;
       top: 0;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      background-color: $light-green;
-      left: 975px;
-      top: 0;
-      width: 245px;
-      height: 288px;
-      z-index: 1;
+      width: 100%;
     }
   }
 }
@@ -137,24 +114,56 @@
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 31px;
+  align-items: center;
+
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid $border-b-mobile;
+    width: 100%;
+    left: 0;
+    bottom: -19px;
+  }
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 1fr auto;
     align-items: center;
-    padding-top: 26px;
+    //padding-top: 26px;
+    margin-bottom: 42px;
+
+    &::after {
+      width: 708px;
+      left: -30px;
+      bottom: -28px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr 15% 1fr;
     align-items: center;
-    padding-top: 26px;
+    padding-top: 15px;
+    padding-bottom: 17px;
+    margin-bottom: 0;
     min-width: 895px;
+
+    &::after {
+      bottom: 0;
+      width: 100%;
+      left: 0;
+    }
   }
 }
 
 .other-products__title {
   font-family: $secondary-ff;
-  font-size: 24px;
+  font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
   color: $catalog-title-text;
@@ -211,12 +220,10 @@
 
 .other-products__button {
   grid-column: 1/-1;
-  margin-bottom: 31px;
 
   @media (min-width: $tablet-width) {
     line-height: 20px;
 
-    margin-bottom: 28px;
     width: 100%;
   }
 
@@ -231,53 +238,97 @@
   font-size: 16px;
   line-height: 20px;
 
-  margin: 0;
+  width: 280px;
+  min-height: 290px;
+  margin: 54px 0 0;
   position: relative;
-  z-index: 1;
   display: block;
-  padding: 187px 61px 43px 58px;
+  padding: 187px 15px 15px 15px;
+
+  background-image: url("../../images/icons/stack.svg#present");
+  background-repeat: no-repeat;
+  background-size: 78px 81px;
+  background-position: top 59px left 50%;
 
   &::before {
     content: "";
     position: absolute;
-    background-image: url("../../images/icons/stack.svg#present");
+    background-image:
+      image-set(
+        url("../../images/bg-catalog-mobile@1x.webp") type("image/webp") 1x,
+        url("../../images/bg-catalog-mobile@2x.webp") type("image/webp") 2x,
+        url("../../images/bg-catalog-mobile@1x.jpg") type("image/jpg") 1x,
+        url("../../images/bg-catalog-mobile@2x.jpg") type("image/jpg") 2x,);
     background-repeat: no-repeat;
-    top: 59px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 78px;
-    height: 81px;
-    z-index: 1;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $light-green;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
   }
 
   @media (min-width: $tablet-width) {
     text-align: left;
 
-    display: flex;
-    justify-content: space-between;
-    padding: 57px 125px 60px 77px;
-    align-items: center;
-    gap: 264px;
+    width: 707px;
+    min-height: 200px;
+    padding: 71px 20px 71px 421px;
+    margin: 98px 0 0;
+    background-position: top 50% left 77px;
 
     &::before {
-      position: unset;
-      transform: none;
+      background-image:
+        image-set(
+      url("../../images/bg-catalog-tablet@1x.webp") type("image/webp") 1x,
+      url("../../images/bg-catalog-tablet@2x.webp") type("image/webp") 2x,
+      url("../../images/bg-catalog-tablet@1x.jpg") type("image/jpg") 1x,
+      url("../../images/bg-catalog-tablet@2x.jpg") type("image/jpg") 2x,
+      );
+      height: 100%;
+    }
+
+    &::after {
+      height: 100%;
     }
   }
 
   @media (min-width: $desktop-width) {
     text-align: center;
 
-    display: block;
-    padding: 185px 42px 43px;
     width: 245px;
-    height: 288px;
+    min-height: 288px;
+    display: block;
+    padding: 185px 15px 15px;
+    margin: 0;
+
+    background-position: top 55px left 50%;
 
     &::before {
-      position: absolute;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 83px;
+      background-image:
+        image-set(
+      url("../../images/bg-catalog-desktop@1x.webp") type("image/webp") 1x,
+      url("../../images/bg-catalog-desktop@2x.webp") type("image/webp") 2x,
+      url("../../images/bg-catalog-desktop@1x.jpg") type("image/jpg") 1x,
+      url("../../images/bg-catalog-desktop@2x.jpg") type("image/jpg") 2x,
+      );
+      height: 100%;
+    }
+
+    &::after {
+      height: 100%;
     }
   }
 }

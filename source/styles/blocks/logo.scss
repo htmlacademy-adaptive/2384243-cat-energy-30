@@ -1,16 +1,8 @@
 .logo {
   display: flex;
   justify-content: space-between;
-  gap: 50px;
   align-items: center;
-
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:focus {
-    opacity: 0.3;
-  }
+  flex-grow: 1;
 
   &:active {
     opacity: 0.6;
@@ -18,11 +10,24 @@
 
   @media (min-width: $tablet-width) {
     gap: 13px;
-    min-width: 174px;
+    //min-width: 174px;
+    flex-grow: 0;
   }
 
   @media (min-width: $desktop-width) {
-    min-width: 202px;
+    //min-width: 202px;
+    &:hover {
+      opacity: 0.8;
+    }
   }
 }
 
+.logo__wordmark {
+  color: $catalog-text;
+
+  flex-grow: 1;
+
+  @media (min-width: $tablet-width) {
+    flex-grow: 0;
+  }
+}

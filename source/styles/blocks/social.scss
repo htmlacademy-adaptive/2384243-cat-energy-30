@@ -14,6 +14,7 @@
 
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 24px;
 
   position: relative;
@@ -37,7 +38,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 9px 0 5px 0;
+    padding: 9px 40px 5px;
 
     &::before {
       content: none;
@@ -52,15 +53,23 @@
 .social__link {
   color: $dark-grey;
 
-  &:hover {
-    color: $green;
-  }
-
-  &:focus {
-    color: $green;
-  }
-
   &:active {
+    color: $green;
     opacity: 0.3;
+  }
+
+  @media (min-width: $desktop-width) {
+    &:hover {
+      color: $green;
+    }
+
+    &:focus {
+      color: $green;
+    }
+
+    &:active {
+      color: $green;
+      opacity: 0.3;
+    }
   }
 }

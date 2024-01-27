@@ -4,6 +4,7 @@ $secondary-ff: "Oswald", "Arial", sans-serif;
 
 $tablet-width: 768px;
 $desktop-width: 1440px;
+$mobile-width-only: 767px;
 
 $main-text: #444444;
 $title-text: #000000;
@@ -12,14 +13,18 @@ $catalog-text: #111111;
 $white: #ffffff;
 $green: #68b738;
 $light-green: rgba(104, 183, 56, 0.85);
-$green-toggle:#5eaa2f;
+$dark-green:#5eaa2f;
 $light-grey: #f2f2f2;
 $bg-cats-grey: #eaeaea;
 $grey: #d3d3d3;
 $border-b-mobile: #d9d9d9;
 $border-b-tablet: #e6e6e6;
 $border-input: #e7e7e7;
+$border-catalog: #ebebeb;
 $border-checkbox: #cdcdcd;
+$border-hover: #bababa;
 $dark-grey: #666666;
 $secondary-grey: #444444;
+$footer-hover: #3e3e3e;
+$footer-active: #6b6b6b;
 $red: #ff8282;

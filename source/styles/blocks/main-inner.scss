@@ -1,4 +1,7 @@
 .main-inner {
+  padding-top: 27px;
+  position: relative;
+
   .contacts__wrap {
     background-color: $light-grey;
 
@@ -9,18 +12,24 @@
 }
 
 .main-inner__header {
-  margin: 0;
   color: $title-text;
   font-family: $secondary-ff;
   font-size: 36px;
   line-height: 36px;
 
-  padding: 27px 30px 41px;
+  margin-bottom: 41px;
+  width: 280px;
+  padding: 0;
 
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
 
-    padding: 0 0 84px;
+    width: 708px;
+    margin-bottom: 84px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
   }
 }
