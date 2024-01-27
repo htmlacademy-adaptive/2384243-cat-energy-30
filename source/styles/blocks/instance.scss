@@ -72,8 +72,9 @@
 
 .instance__result-wrap {
   @media (min-width: $tablet-width) {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    gap: 30px;
     align-items: center;
 
     padding: 0 30px;
@@ -81,8 +82,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-column: 1/2;
-
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 0;
@@ -94,12 +94,11 @@
 
 .instance__result {
   margin: 0;
-  margin-bottom: 34px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
 
   @media (min-width: $tablet-width) {
-    margin: 0;
     gap: 43px;
   }
 
@@ -112,22 +111,32 @@
 }
 
 .instance__result-item {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
   align-items: center;
   gap: 8px;
 
-  border: 1px solid $border-checkbox;
-  border-radius: 4px;
-  padding: 14px 14px 17px;
-  width: 124px;
-  height: 56px;
+  padding: 14px 14px 20px 14px;
   position: relative;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65%;
+    border: 1px solid $border-checkbox;
+    border-radius: 4px;
+  }
+
   @media (min-width: $tablet-width) {
-    gap: 11px;
-    width: 162px;
-    height: 72px;
+    gap: 0;
+    padding-bottom: 0;
+
+    &::before {
+      height: 80%;
+    }
   }
 
   dt {
@@ -150,18 +159,15 @@
   line-height: 100%;
 
   margin: 0;
-  position: absolute;
-  top: 50%;
-  transform: translateY(50%);
   background-color: $bg-cats-grey;
   padding: 0 8px;
-  margin-top: 7px;
+  margin-top: 0;
+  z-index: 1;
 
   @media (min-width: $tablet-width) {
     font-size: 14px;
 
     background-color: $white;
-    margin-top: 20px;
 
     br {
       display: none;

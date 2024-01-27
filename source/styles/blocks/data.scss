@@ -1,14 +1,21 @@
 .data {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 14px 13px;
-  margin: 0;
-  margin-bottom: 24px;
   border: none;
   padding: 0;
+  margin: 0;
+}
+
+.data__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 24px;
 
   @media (min-width: $tablet-width) {
-    gap: 20px 13px;
+    gap: 20px;
     margin-bottom: 72px;
   }
 
@@ -16,7 +23,31 @@
     margin-bottom: 0;
   }
 
-  &--field-wrapper {
+  &--owner-contacts {
+    @media (min-width: $tablet-width) {
+      padding-left: 40px;
+      padding-right: 40px;
+      margin-bottom: 65px;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-left: 0;
+      padding-right: 0;
+      margin-bottom: 70px;
+      gap: 80px;
+    }
+  }
+}
+
+.data__item {
+  display: flex;
+  //grid-template-columns: auto 1fr;
+  flex-wrap: wrap;
+  gap: 13px;
+
+  &--icon {
     position: relative;
 
     &::after {
@@ -26,7 +57,7 @@
       height: 20px;
 
       position: absolute;
-      right: 13px;
+      right: 12px;
       top: 13px;
 
       mask-image: url("../../images/icons/stack.svg#email");
@@ -34,25 +65,11 @@
       background-color: $title-text;
       mask-size: 20px 20px;
     }
-
-    @media (min-width: $tablet-width) {
-      gap: 13px;
-      margin-top: 0;
-      margin-bottom: 0;
-    }
   }
 
-  &--field-wrapper-tel {
+  &--icon-tel {
     &::after {
       mask-image: url("../../images/icons/stack.svg#phone");
-    }
-
-    @media (min-width: $tablet-width) {
-      margin-top: 20px;
-    }
-
-    @media (min-width: $desktop-width) {
-      margin-top: 0;
     }
   }
 
@@ -71,10 +88,21 @@
       background-color: $green;
     }
   }
+
+  @media (min-width: $tablet-width) {
+    &--icon::after {
+      right: 16px;
+      top: 16px;
+    }
+  }
 }
 
 .data__label {
   align-self: center;
+
+  @media (min-width: $tablet-width) {
+    max-width: 50%;
+  }
 }
 
 .data__field {
@@ -87,21 +115,18 @@
   text-transform: uppercase;
 
   border: 1px solid $border-input;
-  padding: 16px 15px 13px;
+  padding: 14px 13px 15px;
+  flex-grow: 1;
 
   &:focus {
     border-color: $main-text;
-  }
-
-  &--error {
-    border-color: $red;
   }
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: normal;
 
-    padding: 16px 10px 13px 20px;
+    padding: 11px 11px 11px 20px;
   }
 
   @media (min-width: $desktop-width) {

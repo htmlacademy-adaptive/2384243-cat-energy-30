@@ -12,7 +12,7 @@
   position: relative;
   background-color: $light-grey;
   margin-bottom: 20px;
-  padding: 30px 33px 18px 20px;
+  padding: 30px 20px 18px 20px;
 
   &--slim {
     margin-bottom: 30px;
@@ -203,8 +203,9 @@
   color: $title-text;
   text-transform: uppercase;
 
-  display: block;
+  display: inline-block;
   position: relative;
+  margin-right: 30px;
 
   &::after {
     content: "";
@@ -214,7 +215,7 @@
     background-position: -8px;
     width: 32px;
     height: 10px;
-    left: 102px;
+    right: -45px;
     top: 3px;
   }
 
@@ -236,7 +237,6 @@
     line-height: normal;
 
     &::after {
-      left: 133px;
       top: 11px;
     }
   }

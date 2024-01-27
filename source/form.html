@@ -60,20 +60,24 @@
           <div class="form__data-wrapper">
 
             <fieldset class="data">
-
               <legend class="visually-hidden">Данные питомца</legend>
-              <label class="data__label" for="name">ИМЯ:*</label>
-              <input class="data__field" type="text" id="name" name="name" placeholder="барсик" required>
-              <!-- для состояния error необходимо добавить модификатор data__field--error -->
-
-              <label class="data__label" for="weight">Вес (кг):*</label>
-              <input class="data__field" type="number" id="weight" name="weight" placeholder="7" required>
-              <!-- для состояния error необходимо добавить модификатор data__field--error -->
-
-              <label class="data__label" for="age">Возраст (лет):</label>
-              <input class="data__field" type="number" id="age" name="age" placeholder="7">
-              <!-- для состояния error необходимо добавить модификатор data__field--error -->
-
+              <ul class="data__list">
+                <li class="data__item">
+                <!-- для состояния error необходимо добавить модификатор data__item--error -->
+                  <label class="data__label" for="name">ИМЯ:*</label>
+                  <input class="data__field" type="text" id="name" name="name" placeholder="барсик" required>
+                </li>
+                <li class="data__item">
+                <!-- для состояния error необходимо добавить модификатор data__item--error -->
+                  <label class="data__label" for="weight">Вес (кг):*</label>
+                  <input class="data__field" type="number" id="weight" name="weight" placeholder="7" required>
+                </li>
+                <li class="data__item">
+                <!-- для состояния error необходимо добавить модификатор data__item--error -->
+                  <label class="data__label" for="age">Возраст (лет):</label>
+                  <input class="data__field" type="number" id="age" name="age" placeholder="7">
+                </li>
+              </ul>
             </fieldset>
 
             <fieldset class="control">
@@ -105,26 +109,25 @@
 
           </div>
 
-          <fieldset class="form__owner-contacts">
+          <fieldset class="form__owner-contacts data">
             <legend class="form__legend form__legend--owner-contacts">
               Контактные данные
               <br>(владельца кота)
             </legend>
-            <div class="form__owner-contacts-wrapper">
-
-              <p class="data data--field-wrapper">
-              <!-- для состояния error необходимо добавить модификатор data--error -->
+            <ul class="data__list data__list--owner-contacts">
+              <li class="data__item data__item--icon">
+              <!--<p class="data data--field-wrapper">-->
+              <!-- для состояния error необходимо добавить модификатор data__item--error -->
                 <label class="data__label" for="email">E-mail:*</label>
                 <input class="data__field" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
-              </p>
-
-              <p class="data data--field-wrapper data--field-wrapper-tel">
-              <!-- для состояния error необходимо добавить модификатор data--error -->
+              </li>
+              <li class="data__item data__item--icon data__item--icon-tel">
+              <!--<p class="data data--field-wrapper data--field-wrapper-tel">-->
+              <!-- для состояния error необходимо добавить модификатор data__item--error -->
                 <label class="data__label data__label--tel" for="tel">Телефон:*</label>
                 <input class="data__field" type="tel" id="tel" name="tel" placeholder="8 (960) 900-60-90" required>
-              </p>
-
-            </div>
+              </li>
+            </ul>
           </fieldset>
 
           <fieldset class="form__comment comment">
@@ -191,8 +194,8 @@
           style="border:0;"
           allowfullscreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-          title="Адрес магазина Cat Energy на карте города Санкт-Петербург"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Адрес магазина Cat Energy на карте города Санкт-Петербург">
         </iframe>
       </article>
 
