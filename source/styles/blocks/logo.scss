@@ -10,12 +10,10 @@
 
   @media (min-width: $tablet-width) {
     gap: 13px;
-    //min-width: 174px;
     flex-grow: 0;
   }
 
   @media (min-width: $desktop-width) {
-    //min-width: 202px;
     &:hover {
       opacity: 0.8;
     }
@@ -29,5 +27,10 @@
 
   @media (min-width: $tablet-width) {
     flex-grow: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 118px;
+    height: 21px;
   }
 }

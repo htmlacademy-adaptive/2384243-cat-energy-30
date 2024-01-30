@@ -1,6 +1,6 @@
 .social {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 35px;
+  margin-bottom: 35px;
 
   @media (min-width: $tablet-width) {
     margin: 0;
@@ -24,7 +24,7 @@
     position: absolute;
     border-bottom: 1px solid $border-b-mobile;
     width: 100%;
-    top: -20px;
+    top: -21px;
     left: 0;
   }
 
@@ -33,12 +33,12 @@
     position: absolute;
     border-bottom: 1px solid $border-b-mobile;
     width: 100%;
-    top: 40px;
+    top: 41px;
     left: 0;
   }
 
   @media (min-width: $tablet-width) {
-    padding: 9px 40px 5px;
+    padding: 8px 40px 5px;
 
     &::before {
       content: none;

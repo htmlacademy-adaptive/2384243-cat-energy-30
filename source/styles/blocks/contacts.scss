@@ -37,7 +37,6 @@
     position: relative;
 
     iframe {
-      //max-width: 1440px;
       height: 400px;
       margin: 0 auto;
 
@@ -57,7 +56,6 @@
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2%;
   align-items: center;
   background-color: $light-grey;
 
@@ -68,8 +66,8 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    padding: 60px 78px 60px 80px;
-    gap: 87px;
+    padding: 60px 72px 59px 80px;
+    gap: 88px;
     top: 95px;
     left: calc((100vw - 1220px)/2);
     width: 565px;
@@ -86,10 +84,15 @@
   text-align: start;
 
   margin: 0;
+  padding-right: 10px;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
   }
 }
 

@@ -9,7 +9,6 @@
     right: 20px;//
     background-image: url("../../images/icons/stack.svg#nav-burger");
     background-repeat: no-repeat;
-    //background-position: top 0 right 0;
     width: 24px;
     height: 24px;
     border: none;
@@ -30,8 +29,7 @@
     background-image: url("../../images/icons/stack.svg#close-button");
     background-repeat: no-repeat;
     background-position: top 0 right 0;
-    width: 24px;
-    height: 18px;
+    background-size: 18px 22px;
     border: none;
     background-color: $white;
   }
@@ -89,8 +87,6 @@
   .main-nav--nojs .main-nav__list {
     display: block;
     position: static;
-    //top: 65px;
-    //left: 0;
     width: 100vw;
     text-align: center;
 
@@ -145,11 +141,12 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px 33px;
-    min-width: 436px;
+    min-width: 445px;
+    padding-top: 4px;
   }
 
   @media (min-width: $desktop-width) {
-    min-width: 475px;
+    min-width: 477px;
   }
 }
 
@@ -174,7 +171,7 @@
       width: inherit;
       height: 2px;
       background-color: $green;
-      bottom: -10px;
+      bottom: -8px;
       left: 0;
       right: 0;
     }

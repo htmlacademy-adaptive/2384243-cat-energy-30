@@ -9,7 +9,7 @@
       display: block;
       border-bottom: 1px solid $border-b-tablet;
       width: 100%;
-      margin-bottom: 47px;
+      margin-bottom: 45px;
     }
   }
 
@@ -32,17 +32,17 @@
   line-height: 40px;
 
   margin: 0;
-  margin-bottom: 42px;
+  margin-bottom: 40px;
 
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
 
-    margin: 0;
+    margin-bottom: 32px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 32px;
+    margin-bottom: 31px;
   }
 }
 
@@ -57,14 +57,15 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 8px 137px;
+    gap: 37px 59px;
+    margin-bottom: 47px;
 
     counter-reset: list;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 7%;
+    gap: 76px;
   }
 }
 
@@ -88,7 +89,7 @@
         width: 80px;
         height: 80px;
 
-        margin: 11px 38px 31px 0;
+        margin: 40px 38px 31px 0;
       }
 
       &::after {
@@ -217,54 +218,44 @@
     align-items: flex-start;
 
     counter-increment: list;
-
-    &--useful {
-      margin-top: 61px;
-    }
-
-    &--form {
-      margin-top: 32px;
-    }
   }
 
   @media (min-width: $desktop-width) {
     &--useful {
-      margin-top: 0;
-
       &::before {
         margin: 40px 38px 31px 0;
       }
     }
 
     &--form {
-      margin-top: 0;
-
       &::before {
-        margin: 40px 31px 31px 0;
+        margin: 40px 31px 31px 1px;
       }
     }
 
     &--eat {
       &::before {
-        margin: 40px 33px 31px 0;
+        margin: 40px 33px 31px 1px;
       }
     }
 
     &--time {
       &::before {
-        margin: 40px 33px 31px 0;
+        margin: 40px 33px 31px 1px;
       }
     }
   }
 }
 
 .advantages__description {
+  padding: 0;
+  margin: 0;
+
   br {
     display: none;
   }
 
   @media (min-width: $tablet-width) {
-    margin: 0;
     position: relative;
     z-index: 1;
 
@@ -272,7 +263,7 @@
     grid-row: 2/-1;
 
     br {
-      display: math; //???
+      display: math;
     }
   }
 }
