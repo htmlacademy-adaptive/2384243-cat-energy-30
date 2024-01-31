@@ -92,12 +92,12 @@
   padding-left: 45px;
   display: block;
 
-  &:disabled {
-    opacity: 0.3;
-  }
-
   @media (min-width: $tablet-width) {
     padding-left: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    cursor: pointer;
   }
 }
 
@@ -106,8 +106,9 @@
   position: absolute;
   width: 30px;
   height: 30px;
+  top: 50%;
+  transform: translateY(-50%);
   left: 0;
-  top: -6px;
   background-color: $white;
   border-radius: 50%;
   border: 1px solid $border-checkbox;
@@ -157,4 +158,8 @@
   @media (min-width: $tablet-width) {
     background-size: 26px 26px;
   }
+}
+
+.control__selected:disabled + .control__input {
+  opacity: 0.3;
 }

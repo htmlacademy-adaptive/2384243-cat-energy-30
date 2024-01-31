@@ -22,7 +22,14 @@
     padding-top: 55px;
     margin: 0 auto;
 
-    gap: 145px;
+    gap: 0;
+  }
+}
+
+.main-header__logo {
+  @media (min-width: $desktop-width) {
+    max-width: 48%;
+    flex-wrap: wrap;
   }
 }
 

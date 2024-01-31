@@ -67,11 +67,13 @@
   @media (min-width: $desktop-width) {
     position: absolute;
     padding: 60px 72px 59px 80px;
-    gap: 88px;
+    gap: 60px;
     top: 95px;
     left: calc((100vw - 1220px)/2);
     width: 565px;
     background-color: $white;
+    display: flex;
+    justify-content: space-between;
   }
 }
 

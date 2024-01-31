@@ -20,6 +20,8 @@
   }
 
   @media (min-width: $desktop-width) {
+    cursor: pointer;
+
     &:hover {
       background-color: $dark-green;
     }

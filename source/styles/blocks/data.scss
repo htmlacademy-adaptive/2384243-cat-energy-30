@@ -57,7 +57,8 @@
 
       position: absolute;
       right: 12px;
-      top: 13px;
+      top: 50%;
+      transform: translateY(-50%);
 
       mask-image: url("../../images/icons/stack.svg#email");
       mask-repeat: no-repeat;
@@ -91,7 +92,8 @@
   @media (min-width: $tablet-width) {
     &--icon::after {
       right: 16px;
-      top: 16px;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 }
@@ -117,6 +119,8 @@
   padding: 14px 12px 11px 15px;
   flex-grow: 1;
 
+  appearance: textfield;
+
   &:focus {
     border-color: $main-text;
   }
@@ -133,4 +137,10 @@
       border-color: $border-checkbox;
     }
   }
+}
+
+.data__field::-webkit-outer-spin-button,
+.data__field::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }

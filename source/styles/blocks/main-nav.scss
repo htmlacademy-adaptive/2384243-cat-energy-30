@@ -125,6 +125,12 @@
   }
 }
 
+.main-nav {
+  @media (min-width: $desktop-width) {
+    max-width: 48%;
+  }
+}
+
 .main-nav__toggle {
   @media (min-width: $tablet-width) {
     display: none;
