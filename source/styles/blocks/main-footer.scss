@@ -9,16 +9,17 @@
   padding-bottom: 40px;
 
   @media (min-width: $tablet-width) {
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 168px auto 168px;
     align-items: center;
-
+    gap: 20px 80px;
     padding-top: 55px;
-    padding-bottom: 55px;
+    padding-bottom: 48px;
   }
 
   @media (min-width: $desktop-width) {
     padding: 66px 0;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -29,7 +30,7 @@
   align-self: center;
 
   @media (min-width: $tablet-width) {
-    padding: 8px 0 3px 0;
+    padding: 6px 0 6px 0;
 
     svg {
       width: 128px;
@@ -46,5 +47,11 @@
     &:active {
       color: $footer-active;
     }
+  }
+}
+
+.main-footer__copyright {
+  @media (min-width: $desktop-width) {
+    margin-left: 185px;
   }
 }

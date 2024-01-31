@@ -5,18 +5,17 @@
 }
 
 .comment__wrap {
-  margin-bottom: 23px;
+  margin-bottom: 22px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 65px;
+    margin-bottom: 59px;
     padding-left: 40px;
-    //padding-right: 40px;
   }
 
   @media (min-width: $desktop-width) {
     padding-left: 0;
     padding-right: 0;
-    margin-bottom: 70px;
+    margin-bottom: 63px;
   }
 }
 
@@ -43,6 +42,7 @@
 
   @media (min-width: $desktop-width) {
     width: 1220px;
-    min-height: 175px;
+    min-height: 176px;
+    padding: 8px 20px;
   }
 }

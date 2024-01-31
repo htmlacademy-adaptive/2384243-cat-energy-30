@@ -13,9 +13,8 @@
     height: 1px;
     width: 100vw;
     right: 0;
-    top: 0;
+    top: -1px;
     box-shadow: 100vw 0 0 $border-input;
-    //z-index: -1;
   }
 
   &::after {
@@ -52,8 +51,9 @@
 
   @media (min-width: $tablet-width) {
     border: 1px solid $border-input;
-    padding: 28px 27px 32px 27px;
+    padding: 28px 27px 31px;
     margin-bottom: 65px;
+    gap: 23px;
   }
 
   @media (min-width: $desktop-width) {
@@ -63,27 +63,26 @@
 
   &--more-info {
     padding: 0;
-    margin-bottom: 34px;
+    margin-bottom: 39px;
 
     @media (min-width: $tablet-width) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 32px 60px;
+      gap: 43px 60px;
       border: none;
       padding: 0 40px;
-      //width: 768px;
       margin: 0 auto;
-      margin-bottom: 52px;
+      margin-bottom: 56px;
     }
 
     @media (min-width: $desktop-width) {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 75px;
+      gap: 80px;
       padding-left: 0;
       padding-right: 0;
       width: 1220px;
-      margin-bottom: 60px;
+      margin-bottom: 65px;
     }
   }
 }
@@ -93,12 +92,12 @@
   padding-left: 45px;
   display: block;
 
-  &:disabled {
-    opacity: 0.3;
-  }
-
   @media (min-width: $tablet-width) {
     padding-left: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    cursor: pointer;
   }
 }
 
@@ -107,8 +106,9 @@
   position: absolute;
   width: 30px;
   height: 30px;
+  top: 50%;
+  transform: translateY(-50%);
   left: 0;
-  top: -6px;
   background-color: $white;
   border-radius: 50%;
   border: 1px solid $border-checkbox;
@@ -158,4 +158,8 @@
   @media (min-width: $tablet-width) {
     background-size: 26px 26px;
   }
+}
+
+.control__selected:disabled + .control__input {
+  opacity: 0.3;
 }
