@@ -142,7 +142,6 @@
   display: inline-block;
 
   @media (min-width: $tablet-width) {
-    //margin: -25px 0 0 -90px;
     position: absolute;
     left: -90px;
     bottom: -526px;
@@ -150,12 +149,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    //position: absolute;
     left: 367px;
     top: 29px;
     bottom: auto;
     z-index: 1;
-    //margin: 0;
   }
 }
 

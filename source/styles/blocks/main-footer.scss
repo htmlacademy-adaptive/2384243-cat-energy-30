@@ -10,7 +10,7 @@
 
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: 168px auto 168px;
     align-items: center;
     gap: 20px 80px;
     padding-top: 55px;
@@ -19,7 +19,7 @@
 
   @media (min-width: $desktop-width) {
     padding: 66px 0;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
