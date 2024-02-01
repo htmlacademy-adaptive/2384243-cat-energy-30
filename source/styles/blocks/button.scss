@@ -19,6 +19,11 @@
     opacity: 0.3;
   }
 
+  &:disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
   @media (min-width: $desktop-width) {
     cursor: pointer;
 
